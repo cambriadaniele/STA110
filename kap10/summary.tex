@@ -55,7 +55,7 @@
     \label{def:10.3}
     Let $(\Omega, \mathcal{F})$ be a measurable space. A map $X: \Omega \to \mathbb{R}^{k}$ 
     is referred to as a random vector on $(\Omega, \mathcal{F})$ if it is
-    $\mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable.
+    $\mathcal{F}/\mathfrak{B}(\mathbb{R}^{k})$ measurable.
 \end{definition}
 
 \begin{proposition}[]
@@ -71,10 +71,92 @@
     \label{def:10.4}
     Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space. The distribution or law of
     a random vector on $(\Omega^{ }, \mathcal{F}^{ })$ is the pushforward measure
-    $P_X = \mathbb{P} X^{-1}$ on $\mathfrak{B}(\mathbb{R}^{k})$ (cf. Defintion ~\ref{def:9.1}).
-
+    $P_X = \mathbb{P} X^{-1}$ on $\mathfrak{B}(\mathbb{R}^{k})$ (cf. Definition ~\ref{def:9.1}).
+    In particular, for any $B \in \mathfrak{B}(\mathbb{R}^{k})$, we use the simplified notation
+    \[
+    \{\omega \in \Omega: X(\omega) \in B\} = \{X \in B\} 
+    ,\] 
+    and hence
+    \[
+    P_X(B) = \mathbb{P}(X^{-1}(B)) = \mathbb{P}(\{\omega \in \Omega: X(\omega) \in B\} ) =
+    \mathbb{P}(X \in B)
+    .\] 
+    For now, unless mentioned otherwise, if $ (\Omega, \mathcal{F}, \mathbb{P})$ is a probability
+    space, any random vector $X$ is a random vector on $(\Omega, \mathcal{F})$, i.e., a $\mathcal{F}$ 
+    measurable function with values in $\mathbb{R}^{k}$.
 \end{definition}
 
+\section{Discrete laws}%
+\label{sec:Discrete laws}
+\begin{definition}[Discrete random vector]
+    \label{def:10.5}
+    Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space. A random vector is referred to as
+    discrete if there exists a countable set $E = E_1 \times \ldots \times E_k \subset \mathbb{R}^{k}$ 
+    s.t. $P_X(E)=1$. That is to say that the law of $X$ has a countable support.
+\end{definition}
+
+\begin{proposition}[Discrete random vector]
+    \label{prop:10.2}
+    Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space. A random vector $X$ is discrete if
+    and only if
+    \[
+    P_X = \sum_{x \in E}^{} p_x {\delta}_x, \quad p_x = \mathbb{P}(X = x)
+    ,\] 
+    for some countable set $E = E_1 \times \ldots \times E_k \subset \mathbb{R}^{k}$. In particular, for
+    any $B \in  \mathfrak{B}(\mathbb{R}^{k})$, $P_X(B) = \sum_{x \in B \cap E}^{} p_x$.
+\end{proposition}
+
+Proof of Proposition ~\ref{prop:10.2}. Suppose that $X$ is discrete. Let $B \in 
+\mathfrak{B}(\mathbb{R}^{k})$. We have that
+\[
+P_X(B) = P_X(B \cap E) = \mathbb{P}(X \in B \cap E) 
+= \mathbb{P}(\bigcup_{x \in B \cap E}\{X = x\} ) ) = \sum_{x \in B\cap E}^{ } p_x
+= \sum_{x \in E}^{ } p_x {\delta}_x(B)
+.\] 
+with respect to the other direction, if $P_X$ is given as in Prop. ~\ref{prop:10.2}, then
+\[
+1 = P_X(\mathbb{R}^{k}) = \sum_{x \in E}^{ } p_x {\delta}_x(\mathbb{R}^{k})
+= \sum_{x \in E}^{ } p_x = \mathbb{P}(X \in E) = P_x(E)
+,\] 
+i.e., $X$ is a discrete random vector according to Def. ~\ref{def:10.5}.
+
+\begin{example}[Tail, head]
+    \label{ex:Tail,_head}
+    Let $\Omega = \{t, h\} $ and
+    \[
+    X(\omega) = 
+    \begin{cases}
+        0, & \text{if } w=t, \\
+        1, & \text{if } w = h.
+    \end{cases}
+    \] 
+    Then, $X$ is a random variable on $(\Omega, \mathcal{P}(\Omega))$.
+
+    Explanation: for the cases $X^{-1}(0) = t$ and $X^{-1}(1) = h$ it is clear. Consider then 
+    $X^{-1}(\omega) = \emptyset \in \mathcal{P}(\Omega) \text{ for any } \omega \not\in \{1, 2\} $.
+
+    Suppose that $\mathbb{P}$ is a probability on $\mathcal{P}(\Omega)$ s.t. $\mathbb{P}(X^{-1}(0)) 
+    = \mathbb{P}(X=0) = 1-p$ and $\mathbb{P}(X=1)=p$.     
+    Clearly, $\mathbb{P}(X \in \{0,1\} ) = P_X(\{0,1\} ) = 1$. By Prop. ~\ref{prop:10.2}, we deduce
+    that the law of $X$ is given by
+    \[
+    P_X = (1-p) \delta _0 + p\delta _1
+    .\] 
+    That is, for any $B \in \mathfrak{B}(\mathbb{R})$,
+    \[
+    P_X(B)= (1-p) \delta _0(B) + p\delta _1(B)=
+    \begin{cases}
+        0, & \text{if } 0 \not\in B \text{ and } 1 \not\in B \\
+        1-p, & \text{if } 0 \in B \text{ and } 1 \not\in B \\
+        p, & \text{if } 0 \not\in B \text{ and } 1 \in B \\
+        1, & \text{if } 0 \in B \text{ and } 1 \in B \\
+    \end{cases}
+    .\] 
+    For example, for $B = (2, 4]$, $X^{-1}(B) = \emptyset \in \mathcal{P}(\Omega)$, and
+    $P_X(B) = P_X(\emptyset) = 0$. Also note that, for example, $\mathbb{P}(X=0) 
+    = \mathbb{P}(X^{-1}(0)) = \mathbb{P}(t) = 1-p$.
+
+\end{example}
 
 
 

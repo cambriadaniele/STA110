@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.24)  26 MAY 2024 15:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.24)  26 MAY 2024 20:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -283,24 +283,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box54
-) (./main.aux (./kap1/summary.aux) (./kap2/summary.aux) (./kap3/summary.aux) (./kap4/summary.aux) (./kap5/summary.aux) (./kap6/summary.aux) (./kap7/summary.aux) (./kap8/summary.aux) (./kap9/summary.aux) (./kap9/lecture.aux) (./kap10/summary.aux) (./kap11/summary.aux
-./kap11/summary.aux:9: Missing \endcsname inserted.
-<to be read again> 
-                   \sigma 
-l.9 ...t sub-$\sigma $-fields}{definition.11.1}{}}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-./kap11/summary.aux:9: Missing \endcsname inserted.
-<to be read again> 
-                   \sigma 
-l.9 ...t sub-$\sigma $-fields}{definition.11.1}{}}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-))
+) (./main.aux (./kap1/summary.aux) (./kap2/summary.aux) (./kap3/summary.aux) (./kap4/summary.aux) (./kap5/summary.aux) (./kap6/summary.aux) (./kap7/summary.aux) (./kap8/summary.aux) (./kap9/summary.aux) (./kap9/lecture.aux) (./kap10/summary.aux) (./kap11/summary.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -388,18 +371,18 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
-\tf@toc=\write4
-\openout4 = `main.toc'.
-
-
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.38 \include{kap1/summary}
-                            [1
+l.42 ...lection of random vectors}{22}{chapter.11}
+                                                  % [1
 
-] [2]
+])
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [2]
 \openout2 = `kap1/summary.aux'.
 
  (./kap1/summary.tex
@@ -506,55 +489,42 @@ Chapter 9.
 
  (./kap10/summary.tex
 Chapter 10.
-) [20
+[20
 
 
 
 
-]
+]) [21]
 \openout2 = `kap11/summary.aux'.
 
  (./kap11/summary.tex
 Chapter 11.
-) [21
+) [22
 
 
 
 
-] (./main.aux (./kap1/summary.aux) (./kap2/summary.aux) (./kap3/summary.aux) (./kap4/summary.aux) (./kap5/summary.aux) (./kap6/summary.aux) (./kap7/summary.aux) (./kap8/summary.aux) (./kap9/summary.aux) (./kap9/lecture.aux) (./kap10/summary.aux) (./kap11/summary.aux
-./kap11/summary.aux:9: Missing \endcsname inserted.
-<to be read again> 
-                   \sigma 
-l.9 ...t sub-$\sigma $-fields}{definition.11.1}{}}
-                                                  
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-))
+] (./main.aux (./kap1/summary.aux) (./kap2/summary.aux) (./kap3/summary.aux) (./kap4/summary.aux) (./kap5/summary.aux) (./kap6/summary.aux) (./kap7/summary.aux) (./kap8/summary.aux) (./kap9/summary.aux) (./kap9/lecture.aux) (./kap10/summary.aux) (./kap11/summary.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 45A7A4B06CAB131CF8426A67D048A9A4;6267.
+(rerunfilecheck)             Checksum: 11C12ABE1FA8F5B08A23D55477549303;6392.
  ) 
 Here is how much of TeX's memory you used:
- 11250 strings out of 474116
- 175171 string characters out of 5743682
+ 11260 strings out of 474116
+ 175313 string characters out of 5743682
  1943187 words of memory out of 5000000
- 33227 multiletter control sequences out of 15000+600000
+ 33232 multiletter control sequences out of 15000+600000
  567940 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,9n,79p,541b,587s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/danielecambria/Library/texlive/2024/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (22 pages, 249368 bytes).
+Output written on main.pdf (23 pages, 254068 bytes).
 PDF statistics:
- 519 PDF objects out of 1000 (max. 8388607)
- 455 compressed objects within 5 object streams
- 156 named destinations out of 1000 (max. 500000)
- 281 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 536 PDF objects out of 1000 (max. 8388607)
+ 471 compressed objects within 5 object streams
+ 161 named destinations out of 1000 (max. 500000)
+ 289 words of extra memory for PDF output out of 10000 (max. 10000000)
 

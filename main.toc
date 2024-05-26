@@ -38,5 +38,6 @@
 \contentsline {chapter}{\numberline {10}General notions in Probability}{20}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Probability spaces}{20}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Random variables and random vectors}{20}{section.10.2}%
-\contentsline {chapter}{\numberline {11}Collection of random vectors}{21}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Independence}{21}{section.11.1}%
+\contentsline {section}{\numberline {10.3}Discrete laws}{21}{section.10.3}%
+\contentsline {chapter}{\numberline {11}Collection of random vectors}{22}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Independence}{22}{section.11.1}%
