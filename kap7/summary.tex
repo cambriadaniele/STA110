@@ -1,0 +1,229 @@
+\chapter{Measurable functions}%
+\label{cha:Measurable functions}
+\section{The concept of measurable functions}%
+\label{sec:The concept of measurable functions}
+
+\begin{definition}[Measurable function]
+    \label{def:7.1}
+    Let $(\Omega, \mathcal{F})$ and $(\Omega^{\ast}, \mathcal{F}^{\ast})$ be two measurable spaces 
+    (cf. Definition ~\ref{def:4.3}). A function $f: \Omega \to \Omega^{\ast}$ is said to be measurable 
+    $\mathcal{F}/\mathcal{F}^{\ast}$ if for any $A^{\ast} \in \mathcal{F}^{\ast}, f^{-1}(A^{\ast}) \in \mathcal{F}$.
+\end{definition}
+
+\begin{proposition}[Measurable function]
+    \label{prop:7.1}
+    let $(\Omega, \mathcal{F})$ and $(\Omega^{\ast}, \mathcal{F}^{\ast})$ be two measurable spaces and 
+    $f: \Omega \to \Omega^{\ast}$ be a function. Suppose that $\mathcal{F}^{\ast} = \sigma(\mathcal{G})$ 
+    and for any $G \in  \mathcal{G}$, $f^{-1}(G) \in \mathcal{F}$. Then, $f$ is 
+    $\mathcal{F}/\mathcal{F}^{\ast}$ measurable.
+\end{proposition}
+
+\begin{definition}[Borel function]
+    \label{def:7.2}
+    A function $f: \mathbb{R}^{m} \to \mathbb{R}^{k}$ is called Borel function if it is measurable 
+    $\mathfrak{B}(\mathbb{R}^{m})/\mathfrak{B}(\mathbb{R}^{k})$.
+\end{definition}
+
+\begin{proposition}[Continuous functions and Borel functions]
+    \label{prop:7.2}
+    Any continuous function $f: \mathbb{R}^{m} \to \mathbb{R}^{k}$ is a Borel function.
+\end{proposition}
+
+\begin{proposition}[$\mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable]
+    \label{prop:7.3}
+    Let $(\Omega, \mathcal{F})$ be a measurable space and $f: \Omega \to \mathbb{R}$ be a real-valued function. Suppose
+    that $\{\omega \in \Omega: f(\omega) \le x\} \in \mathcal{F}$ for any $x \in  \mathbb{R}$, then $f$ is 
+    $\mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable. In other words: $f$ is a measurable function if the pre-image of 
+    any interval $(-\infty, x]$ under $f$ is a measurable set in $\mathcal{F}$, or $f^{-1}((-\infty, x]) \in \mathcal{F}$.
+    since $\mathfrak{B}(\mathbb{R}) = \sigma(\{(-\infty, x]: x \in  \mathbb{R}\})$, we also clearly see the proof
+    (cf. Proposition ~\ref{prop:7.1}).
+\end{proposition}
+
+\paragraph{Thinking about $f^{-1}((-\infty, x))$}%
+\label{ta:7.1}
+If $B \in  \mathfrak{B}(\mathbb{R})$, then,
+$ f^{-1}(B) = \{\omega \in \Omega: f(\omega) \in B\} $
+Is the same as saying,
+$ f^{-1}((-\infty, x)) = \{\omega \in \Omega: f(\omega) \le x\} $. $f^{-1}(B)$ will return ALL of the values $\omega \in \Omega$ 
+for which $f(\omega) \in B$. See My Example ~\ref{myex:7.1} for further intuition.
+
+
+\paragraph{Define $\mathbbm{1}_A(\omega)$} TODO
+\label{}
+
+\begin{example}[Simple measurable function]
+    \label{ex:7.3}
+    Let $\Omega = \{h, t\}$ and $\mathcal{F} = \mathcal{P}(\{h, t\}) = \{\emptyset, \{h\}, \{t\}, \{h, t\} \} $. Then,
+    $\{h\} \in \mathcal{P}(\{h, t\}) $. Thus
+    \[
+    f(\omega) = 
+    \begin{cases}
+        1, & \text{if } \omega = h, \\
+        0, & \text{if } \omega =t,
+    \end{cases}
+    \]
+    is $\mathcal{P}(\{h, t\})/{\mathfrak{B}(\mathbb{R})}$ measurable.
+    In order for f to be $\mathcal{P}(\{h, t\})/{\mathfrak{B}(\mathbb{R})}$ measurable, the pre-image of every
+    Borel set in $\mathbb{R}$ under f must be an element of $\mathcal{F}$. For any $x \in \mathbb{R}$,
+    $f^{-1}((-\infty, x])$ will either be $\emptyset, \{h\}, \text{or } \{t\} \in \mathcal{F}$. 
+\end{example}
+
+\begin{proposition}[$\mathcal{F}/\mathfrak{B}(\mathbb{R}^{k})$ measurable]
+    \label{prop:7.4}
+    Let $(\Omega, \mathcal{F})$ be a measurable space and $f: \Omega \to \mathbb{R}^{k}$, i.e.,
+    \[
+    f(\omega) = (f_1(\omega), \ldots, f_k(\omega))
+    .\] 
+    Then, $f \text{ is } \mathcal{F}/\mathfrak{B}(\mathbb{R}^{k})$ measurable if and only if for any
+    $i = 1, \ldots, k, f_i: \Omega \to \mathbb{R} \text{ is } \mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable.
+\end{proposition}
+
+\begin{proposition}[Composite measurable function]
+    \label{prop:7.5}
+    Let $(\Omega, \mathcal{F})$ be a measurable space and $f_i: \Omega \to \mathbb{R}, i = 1, \ldots, k, \text{ be }
+    \mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable. Suppose that $g: \mathbb{R}^{k} \to \mathbb{R}$ is
+    $\mathfrak{B}(\mathbb{R}^{k})/\mathfrak{B}(\mathbb{R})$ measurable. Then,
+    \[
+    w \mapsto g((f_1(\omega), \ldots, f_k(\omega))) = g(f_1(\omega), \ldots, f_k(\omega))
+    .\] 
+    is $\mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable. (Composite function usually written without double brackets)
+\end{proposition}
+
+\begin{proposition}[Continuity preserves measurability in function composition]
+    \label{prop:7.6}
+    Let $(\Omega, \mathcal{F})$ be a measurable space and $f_i: \Omega \to \mathbb{R}, i = 1, \ldots, k, \text{ be }
+    \mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable. Then, if $g: \mathbb{R}^{k} \to \mathbb{R}$ is continuous,
+    \[
+    w \mapsto g(f_1(\omega), \ldots, f_k(\omega))
+    .\] 
+    is $\mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable. 
+\end{proposition}
+
+\begin{example}[Continuity preserves measurability]
+    \label{ex:7.5}
+    Let $(\Omega, \mathcal{F})$ be a measurable space and $f_i: \Omega \to \mathbb{R}, i = 1, \ldots, k, \text{ be }
+    \mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable. Then, $\sum_{i=1}^{k} f_i$ is $\mathcal{F}/\mathfrak{B}(\mathbb{R})$
+    measurable (cf. Proposition ~\ref{prop:2.12}).
+\end{example}
+
+\begin{example}[Continuity preserves measurability]
+   \label{ex:7.6}
+    Let $(\Omega, \mathcal{F})$ be a measurable space and $f_i: \Omega \to \mathbb{R}, i = 1, \ldots, k, \text{ be }
+    \mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable. Then, $\prod_{i=1}^{k} f_i $ is $\mathcal{F}/\mathfrak{B}(\mathbb{R})$
+    measurable (cf. Proposition ~\ref{prop:2.12}).
+\end{example}
+
+\begin{definition}[Simple functions]
+    \label{def:7.3}
+    A function $f: \Omega \to \mathbb{R}$ is called simple if there exists $n \in \mathbb{N}, \alpha_1, \ldots, \alpha_n
+    \in \mathbb{R}$ and sets $A_1, \ldots, A_n \subset \Omega$ s.t.
+    \[
+        f(\omega) = \sum_{i=1}^{n} \alpha_i \mathbbm{1}_{A_i}(\omega) \quad \omega \in \Omega
+    .\] 
+    That is, a simple function is a finite linear combination of indicator functions.
+\end{definition}
+
+\begin{example}[Simple function]
+    \label{ex:7.7}
+    Let $(\Omega, \mathcal{F})$ be a measurable space and $f$ be a simple function on $\Omega$, i.e.,
+    $f(\omega) = \sum_{i=1}^{n} \alpha_i \mathbbm{1}_{A_i} (\omega)$. Then, if $A_i \in \mathcal{F}$ for any
+    $i = 1, \ldots, n, f$ is $\mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable.
+\end{example}
+
+\begin{myexample}[Simple function]
+    \label{myex:7.1}
+    Let $(\Omega, \mathcal{F})$ be a measurable space and $f: \Omega \to \mathbb{R}$ be the function defined
+    in ~\ref{def:7.3}. For this simplified setting, suppose $\Omega = \{1,2,3,4\} \text{ and }\mathcal{F} =
+    \{\emptyset, \{1,2\} , \{3,4\} , \Omega\} $. Moreover, we define our function with $n =2$, where
+     $\alpha_1 = 3, \alpha_2 = 5, A_1 = \{1,2\} \text{ and } A_2 = \{3,4\} $. Then,
+     \[
+         f(\omega) = 3\cdot \mathbbm{1}_{\{1,2\}}(\omega) + 5\cdot \mathbbm{1}_{\{3,4\}}(\omega)
+     .\] 
+     Now, let's consider two preimages of this function, $f^{-1}(\{3\} ) \text{ and } f^{-1}(\{12\} )$. Note that
+     both of these sets are Borel sets in $\mathbb{R}$. Also note that, if $B \in  \mathfrak{B}(\mathbb{R})$, then,
+     \[
+     f^{-1}(B) = \{\omega \in \Omega: f(\omega) \in B\} 
+     .\] 
+     As seen in Thinking about ~\ref{ta:7.1}. Since $f$ takes the value $3$ for $\omega \in \{1,2\} $,
+     $f^{-1}(\{3\} ) = \{1,2\} \in \mathcal{F} $. And, as $f$ doesn't take any value for values
+     $\not\in \{\{1,2\} , \{3,4\} \} $, $f^{-1}(\{12\} ) = \emptyset \in \mathcal{F}$. So indeed, $f$ is
+     $\mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable.
+\end{myexample}
+
+\begin{definition}[Simple functions in standard form]
+    \label{def:7.4}
+    Let $(\Omega, \mathcal{F})$ be a measurable space and $f: \Omega \to \mathbb{R}$ be a simple function, as defined in
+    Definition ~\ref{def:7.3}. $f$ is called standard if $\cup_{i=1}^{n}A_i = \Omega$ and $\{A_1, \ldots, A_n\} \subset \mathcal{F}$
+    is disjoint. if $f$ is standard, we say that it is a simple function in standard form.
+\end{definition}
+
+\begin{proposition}[7.7]
+    \label{prop:7.7}
+    TODO
+    
+\end{proposition}
+
+\begin{proposition}[7.8]
+    \label{prop:7.8}
+    TODO
+    
+\end{proposition}
+
+\section{Functions taking values in the extended real numbers}%
+\label{sec:Functions taking values in the extended real numbers}
+\begin{definition}[Measurable functions in $\overline{\mathbb{R}}$]
+    \label{def:7.5}
+    Let $(\Omega, \mathcal{F})$ be a measurable space and $f: \Omega \to \overline{\mathbb{R}}$. We say that
+    $f$ is $\mathcal{F}$ measurable if for any $A \in \mathfrak{B}(\mathbb{R})$, $\{\omega \in  \Omega: f(\omega) \in A\} \in \mathcal{F}$ 
+    and $\{\omega \in  \Omega: f(\omega) = -\infty\} \in \mathcal{F}$ and $\{\omega \in  \Omega: f(\omega) = \infty\} \in \mathcal{F}$ .
+    Or, in other words, $f^{-1}(A), f^{-1}(-\infty), f^{-1}(\infty) \in \mathcal{F}$.
+\end{definition}
+
+\paragraph{Remark 7.2}
+\label{rem:7.2}
+As seen in the script, as, if $f: \Omega \to \mathbb{R}, f^{-1}(-\infty), f^{-1}(\infty) = \emptyset$, any results on $\mathcal{F}$ meeasurable
+functions $f: \Omega \to \overline{\mathbb{R}}$ also apply to $\mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable functions $f:\Omega\to \mathbb{R}$.
+
+\paragraph{Remark 7.3}
+\label{rem:7.3}
+TODO, but important for notation, read it from the script.
+
+\begin{proposition}[7.9]
+    \label{prop:7.9}
+    TODO
+\end{proposition}
+
+\begin{proposition}[7.10]
+    \label{prop:7.10}
+    TODO
+\end{proposition}
+
+\begin{definition}[Positive and negative parts of a function]
+    \label{def:7.6}
+    TODO
+\end{definition}
+
+\begin{proposition}[]
+    \label{prop:7.11}
+    This proposition states that any $\mathcal{F}$-measurable function $f$ can be approximated by a sequence of $\mathcal{F}$-measurable simple functions $(f_n)_{n \in \mathbb{N}}$ such that $f_n(\omega) \rightarrow f(\omega)$ for all $\omega \in \Omega$.
+
+\end{proposition}
+
+\begin{myexample}[]
+    \label{myex:prop7.11}
+    Consider $\Omega = [0,1]$ and $\mathcal{F}$ be the Borel $\sigma$-field on $[0,1]$. Let $f(x) = x$. Define the sequence of simple functions $f_n(x) = \frac{\lfloor nx \rfloor}{n}$. Each $f_n$ is $\mathcal{F}$-measurable and $f_n(x) \rightarrow x$ as $n \rightarrow \infty$.
+\end{myexample}
+
+\begin{proposition}[]
+    \label{prop:7.12}
+This proposition extends 7.11 by specifying that if $f$ is non-negative, the convergence of the simple functions can be made monotone, i.e., $f_n(\omega)$ increases with $n$ and converges to $f(\omega)$.
+
+\end{proposition}
+
+\begin{myexample}[]
+    \label{myex:prop7.12}
+Using the same function $f(x) = x$ on $\Omega = [0,1]$, define $f_n(x) = \frac{\lfloor nx \rfloor}{n}$. Note that $f_n(x) \leq f_{n+1}(x)$ for all $x \in [0,1]$ and $n \in \mathbb{N}$, ensuring that $f_n(x) \uparrow f(x)$ as $n \rightarrow \infty$.
+\end{myexample}
+
+\section{Sequence of measurable functions}%
+\label{sec:Sequence of measurable functions}

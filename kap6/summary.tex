@@ -1,0 +1,103 @@
+\chapter{Measurable sets: Part III}%
+\label{cha:Measurable sets: Part III}
+\section{Measure extensions}%
+\label{sec:Measure extensions}
+
+\begin{proposition}[]
+    \label{prop:6.1}
+    Let $(a,b]$, $a < b\in \mathbb{R}$, be any left-open interval. Let $I$ be countable and $(a_i,b_i]$, $i\in I$, be s.t.,
+    $(a,b]\subset \bigcup_{i \in  I}(a_i,b_i] $, then
+    \[
+        b-a \le \sum_{i \in I} (b_i - a_i) \tag{10}
+    .\] 
+\end{proposition}
+
+\begin{proposition}[]
+    \label{prop:6.2}
+    Let $(a,b]$,  $a < b \in \mathbb{R}$, be any left-open interval. let $I$ be countable and $\{(a_i,b_i]: i \in I\}$ be a 
+    disjoint collection of left-open intervals s.t. $\bigcup_{i \in  I}(a_i, b_i] \subset (a,b]$. Then
+    \[
+    \sum_{i\in I}(b_i - a_i) \le b-a
+    .\] 
+\end{proposition}
+
+\begin{definition}[]
+    \label{def:6.1}
+    Let $\Omega \neq \emptyset$ be a set and $\mathcal{A}$ be a collection of subsets from $\Omega$. Let $A \in  
+    \mathcal{P}(\Omega)$ be any subset of $\Omega$. A collection $\{U_i: i \in  I\} $ is said to be a covering of $A$ by 
+    sets from $\mathcal{A}$ if:
+    \begin{enumerate}[label=(\roman*)]
+      \item $\{U_i: i \in I\} \subset \mathcal{A}$ (Set membership condition)
+          \begin{enumerate}
+              \item[NOTE] that $(i)$ means $U_i \subset \mathcal{A}$ $\forall i\in I$, 
+                  not $\bigcup_{i \in  I}U_i \subset \mathcal{A} $.
+        \end{enumerate}
+      \item $A \subset \bigcup_{i \in I}U_i$ (Covering condition)
+    \end{enumerate}
+    A covering $\{\bigcup_{i}: i \in I \} $ of $A$ by sets from  $\mathcal{A}$
+    is referred as countable (resp. finite) if $I$ is countable (resp. finite). We write  $C_\mathcal{A}(A)$ for the set which
+    contains all the countable covering of  $A$ by sets from $\mathcal{A}$, i.e.,
+    \[
+    C_\mathcal{A}(A) = \{ \xi : \xi \text{ is a countable covering of $A$ by sets from }  \mathcal{A} \} 
+    .\] 
+
+    \paragraph{Why do we say $A \in \mathcal{P}(\Omega)$ instead of $A \in \Omega$?}
+    When we use the notation $A \in \mathcal{P}(\Omega)$, it signifies that $A$ is a subset of $\Omega$, not an element of 
+    $\Omega$. The power set $\mathcal{P}(\Omega)$ represents all possible subsets of $\Omega$, including $\Omega$ itself, 
+    any subset of it, or even an empty set. Using $A \in \Omega$ would incorrectly imply that $A$ is an individual element of 
+    $\Omega$, which does not align with the context of covering subsets with subsets.
+
+\end{definition}
+
+\begin{myexample}[Finite Covering]
+    \label{myex:Finite_Covering}
+    Let $\Omega = \{1,2,3,4,5\} $, and let $\mathcal{A}$ be a collection of subests of $\Omega$, such as $\mathcal{A} =
+    \{\{1\}, \{2,3\}, \{3,5\}  \} $, if we take $A = \{1,2,3\} $, a finite covering of $A$ by sets from  $\mathcal{A}$ 
+    could be $\{\{1\}, \{2,3\}  \} $. This covering is finite, as $I$ can be  $\{1,2\} $, which is finite.
+    The 2 conditions both hold.
+    Each $U_i$ is a subset of  $\mathcal{A}$, and $A$ is covered by the union of  $U_i$.
+    In this case, the possible countable coverings of $A$ that can be formed using subsets of  $\mathcal{A}$ are restricted
+    to the one already provided. Therefore, $C_\mathcal{A}(A) = \{\{1\}, \{2,3\}  \} $
+\end{myexample}
+
+\paragraph{Important from Example 6.1 (Script)}%
+\label{par:Important from Example 6.1 in the Script}
+Let $\Omega = \mathbb{R}$ and $\mathcal{R} = \{A: A = (a,b], a,b \in \mathbb{R}\} \cup \{\emptyset\}  $.
+We define the function 
+$\ell: \mathcal{R} \to [0, \infty)$ s.t.
+\[
+\ell(U) =
+\begin{cases}
+    b-a, & \text{if } U = (a,b], \\
+    0, & \text{if } U = \emptyset.
+\end{cases}
+\] 
+Given $A \in \mathcal{P}(\mathbb{R})$, we also define the function $v_{\ell}( \xi ): \mathcal{R} \to \mathbb{R}^{+}$, where $ \xi \in C_\mathcal{R}(A)$ s.t.
+\[
+    v_{\ell}( \xi ) = \sum_{U \in \xi} \ell(U)
+.\] 
+We also show that
+\[
+    \inf \{v_{\ell}( \xi ) : \xi \in C_\mathcal{R}((a,b])\} = \inf_{\xi \in C_{\mathcal{R}}((a, b])} {v_{\ell}(\xi) = b - a,} \tag{11}
+\] 
+i.e., $b-a$ is a lower bound for the values of $v_{ \ell}( \xi)$, $ \xi \in C_\mathcal{R}((a,b])$. We also saw that there
+exists $ \xi \in C_\mathcal{R}((a,b])$ s.t. $b-a = v_{\ell}( \xi)$. Hence, the latter infimum is a 
+minimum (Proposition~\ref{prop:prop6.3}).
+
+\begin{proposition}[]
+    \label{prop:prop6.3}
+    Given any left open interval $(a,b]$, $min_{  \xi \in C_\mathcal{R}((a,b])} v_{\ell}( \xi) = b-a$
+\end{proposition}
+
+\paragraph{Define $\ell^\ast$}%
+\label{par:Define_l_star}
+We build on the latter result and define the function 
+\[
+    \ell^{\ast} = \inf_{\xi \in C_{\mathcal{R}}(A)} {v_{\ell}(\xi)}, \quad A \in \mathcal{P}(\mathbb{R})
+.\] 
+Note, we know that if $A \in \mathcal{R}$, then $\ell^{\ast}(A) = b-a$
+
+
+
+
+

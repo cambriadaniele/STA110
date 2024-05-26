@@ -1,0 +1,221 @@
+\chapter{Integration: Part I}%
+\label{cha:Integration: Part I}
+\section{The integral for non-negative functions}%
+\label{sec:The integral for non-negative functions}
+
+If $f: \Omega \to \overline{\mathbb{R}}$ is s.t. $f(\omega)\ge 0$ for any $\omega \in \Omega$,
+$f$ is said to be nonnegative.
+
+\begin{definition}[Finite partitions]
+    \label{def:8.1}
+    Let $\Omega$ be a set. A partiton of $\Omega$ is a disjoint collection
+    $\{A: A \in P\}, P \subset \mathcal{P}(\Omega)$, s.t. $\cup_{A \in P}A = \Omega$. That is,
+    a partition of $\Omega$ is a disjoint collection of subets of $\Omega$ whose union is
+    $\Omega$. If $\xi$ is a partition of $\Omega$, a set $A \in \xi$ is referred to as an atom
+    of $\xi$. A partition $\xi \text{ of } \Omega$ is said to be finite, if it contains a
+    finite number of atoms.
+\end{definition}
+
+\begin{example}[Finite partition]
+    \label{ex:8.1}
+    Let $\Omega = \{0, 1, \ldots, N\} , N \in \mathbb{N}$. Then, $\xi = \{\{\omega\}:w \in 
+    \Omega\} $ is a finite partition of $\Omega$. (Partition contains $N+1$ elements).
+\end{example}
+
+\begin{definition}[$Z_0^{\mathcal{F}}$]
+    \label{def:8.2}
+    Let $(\Omega, \mathcal{F})$ be a measurable space. We use the notation 
+    $Z_0^{\mathcal{F}}(\Omega) =Z_0^{\mathcal{F}}$ for the set which contains all the finite
+    partitions of $\Omega$ with atoms from $\mathcal{F}$. That is,
+    \[
+    Z_0^{\mathcal{F}} = \{\xi : \xi \text{ is finite partition of } \Omega\text{ s.t. for any A } 
+    \in \xi, A \in \mathcal{F}\} 
+    .\] 
+\end{definition}
+
+\begin{definition}[Integral for a nonnegative standard simple function]
+    \label{def:8.3}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space and $f:\Omega \to \overline{\mathbb{R}}$ 
+    be nonnegative and $\mathcal{F}$ measurable. Then, we define
+    \[
+    S_\mu^{f}(\xi) = \sum_{A \in \xi} (\inf_{\omega \in A}f(\omega))\mu(A), \quad \xi
+    \in Z_0^{\mathcal{F}},
+    \] 
+    Essentially, $S_\mu^f(\xi)$ approximates the integral of $f$ by considering the smallest 
+    value $f$ takes on each piece of the partition and multiplying this by the measure of 
+    the piece. And
+    \[
+    \int_{\Omega} f(\omega)\mu(d\omega) = \sup_{\xi \in Z_0^{\mathcal{F}}} 
+    S_\mu^{f}(\xi)
+    .\] 
+    The integral of $f$ over $\Omega$ with respect to $\mu$, is the supremum of 
+    $S_\mu^f(\xi)$ over all possible partitions $\xi$ of $\Omega$ in $Z_0^{\mathcal{F}}$.
+    This definition captures the idea of the integral as the limit of finer and finer 
+    approximations of $f$ by simple functions.
+    Upon the latter definition, we deduce the integral for a (nonnegative) standard simple
+    function (cf. Definition ~\ref{def:7.4}).
+\end{definition}
+
+\begin{proposition}[]
+    \label{prop:8.1}
+    TODO
+\end{proposition}
+
+\begin{myexample}[Integral of a nonnegative standard simple function]
+    \label{myex:8.1}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space with $\Omega = \{a, b, c, d\} $,
+    $\mathcal{F} = \mathcal{P}(\Omega)$, and $\mu$ is the counting measure, i.e., $\mu(A)$ is
+    the number of elements in $A$. Let $f: \Omega \to \overline{\mathbb{R}}$,
+    \[
+    f(\omega) = 
+    \begin{cases}
+        1 & \text{ if } \omega = a,\\
+        2 & \text{ if } \omega = b,\\
+        3 & \text{ if } \omega = c,\\
+        0 & \text{ if } \omega = d
+    \end{cases}
+    \] 
+    Consider the partition $\xi = \{\{a\} , \{b\} , \{c\} , \{d\} \} $. 
+    $\inf_{\omega \in \{a\} }f(\omega) = 1$, $\inf_{\omega \in \{b\} }f(\omega) = 2$,
+    $\inf_{\omega \in \{c\} }f(\omega) = 3$, $\inf_{\omega \in \{d\} }f(\omega) = 4$.
+    Since each singleton set in $\xi$ as measure of $1$ under $\mu$,
+    \[
+    S_\mu^{f}(\xi) = (1 \times 1) + (2 \times 1) + (3\times 1) + (0\times 1) = 6
+    \]
+    if $\sup_{\xi \in Z_0^{\mathcal{F}}} S_\mu^{f} = 6$, which I think it should be, then
+    $\int_{\Omega} f(\omega)\mu(d\omega)$ = 6.
+\end{myexample}
+
+\begin{example}[]
+    \label{ex:8.2}
+    Example 8.2 interesting and clear, TODO.
+\end{example}
+
+\begin{proposition}[Monotone convergence theorem]
+    \label{prop:8.2}
+    Let $(\Omega,\mathcal{F}, \mu)$ be a measure space and $f_n:\Omega \to \overline{\mathbb{R}}$,
+    $ n \in \mathbb{N}$, be a sequence of nonnegative $\mathcal{F}$ measurable functions s.t.
+    for any $\omega \in \Omega, f_n(\omega)\uparrow f(\omega)$ for some $f: \Omega \to 
+    \overline{\mathbb{R}}$. Then,
+    \[
+    \int_{\Omega}f_n(\omega)\mu(d\omega)\uparrow \int_{\Omega}f(\omega)\mu(d\omega)   
+    .\] 
+\end{proposition}
+
+\begin{proposition}[The integral of nonnegative functions is linear]
+    \label{prop:8.3}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measurable space, $f, g: \Omega \to \overline{\mathbb{R}}$
+    be two nonnegative and $\mathcal{F}$ measurable functions. Given $\alpha, \beta \in  [0, \infty)$ 
+    we have that
+    \[
+    \int_{\Omega} (\alpha f + \beta g)(\omega)\mu(d\omega) =
+    \alpha \int_{\Omega} f(\omega)\mu(d\omega) + \beta \int_{\Omega} g(\omega)\mu(d\omega)
+    .\] 
+\end{proposition}
+
+As a consequence of the latter two proposition we have the following result:
+
+\begin{proposition}[]
+    \label{prop:8.4}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space and $f_i: \Omega \to
+    \overline{\mathbb{R}}, i \in  \mathbb{N}$, be a sequence of nonnegative $\mathcal{F}$ 
+    measurable functions, then
+    \[
+        \int_{\Omega}\left( \sum_{i\in \mathbb{N}} f_i \right) (\omega)\mu(d\omega) =
+        \sum_{i \in \mathbb{N}} \left( \int_{\Omega} f_i(\omega)\mu(d\omega) \right) 
+    .\] 
+\end{proposition}
+
+\begin{definition}[True almost everywhere $(a.e.)$]
+    \label{def:8.4}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space. Suppose that for any $\omega
+    \in \Omega, S(\omega)$ is a statment on $\Omega$. We say $S$ is true $\mu$ almost
+    everywhere $(a.e.)$ if $\mu(\{\omega: S(\omega) \text{ is false}\} ) = 0$.
+\end{definition}
+
+\begin{example}[$\mu (a.e.)$]
+    \label{ex:8.3}
+    Interesting and clear. TODO.
+\end{example}
+
+\begin{proposition}[]
+    \label{prop:8.5}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space. Assume that $f, g: \Omega
+    \to \overline{\mathbb{R}}$ be two nonnegatibe and $\mathcal{F}$ measurable functions.
+    \begin{enumerate}[label=(\roman*)]
+        \item If $\mu(\{\omega: f(\omega) > 0\} ) > 0, \text{ then } \int_{\Omega} f(\omega)
+            \mu(d\omega)>0$;
+        \item If $\int_{\Omega} f(\omega)\mu(d\omega) < \infty$, then $f<\infty \ \mu \ a.e.;$
+        \item If  $f\le g \ \mu \ a.e.$, then $\int_{\Omega} f(\omega)\mu(d\omega)\le 
+            \int_{\Omega} g(\omega)\mu(d\omega)$;
+        \item If  $f = g \ \mu \ a.e.$, then $\int_{\Omega} f(\omega)\mu(d\omega) =
+            \int_{\Omega} g(\omega)\mu(d\omega)$.
+    \end{enumerate}
+\end{proposition}
+
+\section{Integrable functions}%
+\label{sec:Integrable functions}
+We recall the definiton of the positive $\left( f^{+} \right) $ and negative $\left( f^{-} \right) $
+parts of a function (cf. Definition ~\ref{def:7.6}). Pay attention, $f^{-}$ is basically the negative
+part of the function, but reflected by the x-axis. The result is positive. Also see ~\ref{ex:7.5}
+
+\begin{definition}[Integral of an integrable function]
+    \label{def:8.5}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space  and $f: \Omega\to \overline{\mathbb{R}}$
+    be a $\mathcal{F}$ measurable function. The integral of $f$ is defined by:
+    \[
+    \int_{\Omega} f(\omega)\mu(d\omega) = \int_{\Omega} f^{+}(\omega)\mu(d\omega) -
+    \int_{\Omega} f^{-}(\omega)\mu(d\omega)
+    ,\] 
+    unless $\int_{\Omega} f^{+}(\omega)\mu(d\omega) = \int_{\Omega} f^{-}(\omega)\mu(d\omega) = 
+    \infty$,
+    in which case $\int_{\Omega} f(\omega)\mu(d\omega)$ is not defined. \\ If both 
+    $\int_{\Omega} f^{+}(\omega)\mu(d\omega) 
+    < \infty$ and $\int_{\Omega}f^{-}(\omega)\mu(d\omega) 
+    < \infty$,
+    $f$ is said to be integrable.
+
+    (NOTE) This assumption is definied upon the measure $\mu$, i.e., if one wants to further refer to the measure
+    of integration one specifies that $f$ is integrable with respect to $\mu$.
+\end{definition}
+
+\begin{proposition}[Generalisation of the condition for $f$ to be integrable]
+    \label{prop:8.6}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space  and $f: \Omega\to \overline{\mathbb{R}}$ be 
+    $\mathcal{F}$ measurable. Then, $f$ is integrable if and only if
+    $\int_{\Omega} \lvert f(\omega) \rvert \mu(d\omega) < \infty$.
+\end{proposition}
+
+\begin{proposition}[Extension (cf. (iii) Proposition ~\ref{prop:8.5})]
+    \label{prop:8.7}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space and $f, g: \Omega \to \overline{\mathbb{R}}$ 
+    be $\mathcal{F}$ measurable. If $f$ and $g$ are integrable and $f\le g \ a.e.$, then,
+    $\int_{\Omega} f(\omega)\mu(d\omega) \le \int_{\Omega}g(\omega)\mu(d\omega)$.
+\end{proposition}
+
+\begin{proposition}[Extension (c.f. Proposition ~\ref{prop:8.3})]
+    \label{prop:8.8}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measurable space, $f, g: \Omega \to \overline{\mathbb{R}}$
+    be two integrable and $\mathcal{F}$ measurable functions. Then, for any $\alpha, \beta \in \mathbb{R}$ 
+    we have that $\alpha f + \beta g$ is integrable and
+    \[
+    \int_{\Omega} (\alpha f + \beta g)(\omega)\mu(d\omega) =
+    \alpha \int_{\Omega} f(\omega)\mu(d\omega) + \beta \int_{\Omega} g(\omega)\mu(d\omega)
+    .\] 
+\end{proposition}
+
+\section{Fatou's lemma and Lebesgue's dominated convergence theorem}%
+\label{sec:Fatou's lemma and Lebesgue's dominated convergence theorem}
+
+\begin{proposition}[Fatou's lemma]
+    \label{prop:8.9}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space and $f_n: \Omega \to \overline{\mathbb{R}},
+    n \in \mathbb{N}$, be a sequence of nonnegative and $\mathcal{F}$ measurable function. Then,
+    \[
+    \int_{\Omega} \lim_{n \to \infty} \inf f_n(\omega)\mu(d\omega) \le 
+    \lim_{n \to \infty} \inf \int_{\Omega} f_n(\omega)\mu(d\omega)
+    .\] 
+\end{proposition}
+
+
+

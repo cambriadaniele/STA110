@@ -1,0 +1,53 @@
+\documentclass[10pt]{report} % or any document class suitable for your book
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % and any other packages you need
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{bbm}
+
+% Include the geometry package
+\usepackage{geometry}
+% Set all margins to 1 inch
+\geometry{margin=1in}
+
+% Definition of theorem styles
+\theoremstyle{definition} % Style for definitions
+\newtheorem{definition}{Definition}[chapter] % Numbering by chapter
+\newtheorem{example}{Example}[chapter] % Numbering by chapter, independent of definitions
+\newtheorem{myexample}{My Example}[chapter] % Each with its own counter
+\newtheorem{exercise}{Exercise}[chapter] % Independent numbering
+\newtheorem{proposition}{Proposition}[chapter] % Independent numbering
+
+\usepackage{hyperref} % For cross-referencing
+
+% Any global settings here
+\title{Summary: Introduction to Probability}
+\author{Daniele Cambria}
+\date{2024}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+% Include your chapter files
+\include{kap1/summary}
+\include{kap2/summary}
+\include{kap3/summary}
+\include{kap4/summary}
+\include{kap5/summary}
+\include{kap6/summary}
+\include{kap7/summary}
+\include{kap8/summary}
+\include{kap9/summary}
+\include{kap9/lecture}
+\include{kap10/summary}
+\include{kap11/summary}
+% Repeat for as many chapters as you have
+
+\end{document}
+

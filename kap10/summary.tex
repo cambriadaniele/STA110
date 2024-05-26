@@ -1,0 +1,81 @@
+\chapter{General notions in Probability}%
+\label{cha:General notions in Probability}
+
+\section{Probability spaces}%
+\label{sec:Probability spaces}
+
+\begin{definition}[]
+    \label{def:10.1}
+    Let $(\Omega, \mathcal{F})$ be a measurable space. A probability $\mathbb{P}$ on
+    $\mathcal{F}$ is a measure on $\mathcal{F}$ s.t. $\mathbb{P}(\Omega) = 1$.
+    The triple $(\Omega, \mathcal{F}, \mathbb{P})$ is referred to as a probability space.
+\end{definition}
+
+\begin{example}[]
+    \label{ex:10.1}
+    Let $\Omega$ be a finite and nonempety set. Define
+    \[
+    \mathbb{P}(A) = \frac{\#A}{\#\Omega}, \quad A \in \mathcal{P}(\Omega),
+    .\] 
+    Where $\mathcal{P}(\Omega)$ is the power set on $\Omega$. Then, $\mathbb{P}$ is a 
+    probability on $\mathcal{P}(\Omega)$.
+\end{example}
+
+\begin{example}[]
+    \label{ex:10.2}
+    Let $C$ be a set s.t. $\#C = 52$. Suppose that
+    \[
+    C = S_1 \cup S_2 \cup  S_3 \cup S_4
+    ,\] 
+    with $\{S_1, S_2, S_3, S_4\} $ disjoint and s.t. $\#S_i = 13 \text{ for all } 
+    i = 1,2,3,4$. We remain in the setting of the previous example with
+    \[
+    \Omega = \{A \subset C: \#A = 5\},
+    \] 
+    and $\mathbb{P}$ on $\mathcal{P}(\Omega)$ defined as in exercise ~\ref{ex:10.1}.
+    Upon exercise ~\ref{ex:1.11}, we already know that $\#\Omega = \binom{52}{5}$.
+    Let
+    \[
+    A_i = \{A \subset S_i: \#A = 5\}, \quad i=1,2,3,4, 
+    \] 
+    TODO
+\end{example}
+
+\section{Random variables and random vectors}%
+\label{sec:Random variables and random vectors}
+
+\begin{definition}[Random variable]
+    \label{def:10.2}
+    Let $(\Omega, \mathcal{F})$ be a measurable space. A map $X: \Omega \to \mathbb{R}$
+    is referred to as a random variable on $(\Omega, \mathcal{F})$ if it if 
+    $\mathcal{F}/ \mathfrak{B}(\mathbb{R})$ measurable.
+\end{definition}
+
+\begin{definition}[Random vector]
+    \label{def:10.3}
+    Let $(\Omega, \mathcal{F})$ be a measurable space. A map $X: \Omega \to \mathbb{R}^{k}$ 
+    is referred to as a random vector on $(\Omega, \mathcal{F})$ if it is
+    $\mathcal{F}/\mathfrak{B}(\mathbb{R})$ measurable.
+\end{definition}
+
+\begin{proposition}[]
+    \label{prop:10.1}
+    Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space and $X$ be a random
+    vector on $(\Omega^{ }, \mathcal{F}^{})$. A random variable $Y$ on $(\Omega^{ }, \mathcal{F}^{ })$
+    is $\sigma(X)$ measurable if and only if there exists a function
+    $f: \mathbb{R}^{k} \to \mathbb{R}$ which is $\mathfrak{B}(\mathbb{R}^{k})$ measurable s.t.
+    $Y = f(X)$.
+\end{proposition}
+
+\begin{definition}[]
+    \label{def:10.4}
+    Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space. The distribution or law of
+    a random vector on $(\Omega^{ }, \mathcal{F}^{ })$ is the pushforward measure
+    $P_X = \mathbb{P} X^{-1}$ on $\mathfrak{B}(\mathbb{R}^{k})$ (cf. Defintion ~\ref{def:9.1}).
+
+\end{definition}
+
+
+
+
+

@@ -1,0 +1,97 @@
+\chapter{Integration: Part II}%
+\label{cha:Integration: Part II}
+\section{Pushforward measure}%
+\label{sec:Pushforward measure}
+
+\begin{definition}[Pushforward function]
+    \label{def:9.1}
+    Let $(\Omega^{ }, \mathcal{F}^{ })$ and $(\Omega^{*}, \mathcal{F}^{*})$ be two measurable
+    spaces and $g: \Omega \to \Omega^{*}$ be $\mathcal{F}/\mathcal{F}^{*}$ measurable. Let
+    $\mu$ be a measure on $\mathcal{F}$. Define the function
+    \[
+    \mu g^{-1}(A^{*}) = \mu(g^{-1}(A^{*})) =
+    \mu(\{\omega \in  \Omega: g(\omega \in A^{*})\} ), \quad A^{*} \in \mathcal{F}^{*}
+    .\] 
+    The measure $\mu g^{-1}$ is referred to as the pushforward measure of $\mu$.
+    This means that $\mu g^{-1}$ measures, in terms of $\mu$, the pre-image of each set
+    $A^{*}$ under $g$. Hence, $\mu$ is a valid measure on $(\Omega^{*}, \mathcal{F}^{*})$!!
+    It provides a way to "transfer" the measure from $(\Omega^{ }, \mathcal{F}^{ })$ to
+    $(\Omega^{*}, \mathcal{F}^{*})$ via the function $g$.
+\end{definition}
+
+\begin{proposition}[]
+    \label{prop:9.1}
+    TODO
+\end{proposition}
+
+\section{Densities}%
+\label{sec:Densities}
+\begin{proposition}[$\nu$ is a measure on $\mathcal{F}$]
+    \label{prop:9.2}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space and $\phi: \Omega \to 
+    \overline{\mathbb{R}}$ be a nonnegative and $\mathcal{F}$ measurable function. Then,
+    $\nu$ defined by
+    \[
+    \nu(A) = \int_{A} \phi(\omega)\mu(d\omega), \quad A \in \mathcal{F}, 
+    \] 
+    is a measure on $\mathcal{F}$
+\end{proposition}
+
+\begin{definition}[$\phi$, density of $\nu$ in respect to $\mu$]
+    \label{def:9.2}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space and $\nu$ be a measure on $\mathcal{F}$.
+    A nonnegative and $\mathcal{F}$ measurable funtion $\phi: \Omega \to \overline{\mathbb{R}}$ 
+    is said to be a density of $\nu$ with respect to $\mu$ if for any $A \in \mathcal{F},
+    \nu(A) = \int_{A} \phi(\omega)\mu(d\omega)$.
+\end{definition}
+
+\begin{proposition}[]
+    \label{prop:9.3}
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space. Suppose that $\nu$ is a measure on
+    $\mathcal{F}$ with density $\phi$ with respect to $\mu$. Then
+    \begin{enumerate}[label=(\roman*)]
+        \item for any nonnegative and $\mathcal{F}$ measurable function $f$,
+            \[
+            \int_{A} f(\omega)\nu(d\omega) = \int_{A} f(\omega)\phi(w)\nu(d\omega), \quad
+            A \in \mathcal{F};
+            \] 
+        \item $f$ is integrable with respect to $\nu$ if and only if $f \phi$ (the product
+            of the two functions) is integrable with respect to $\mu$. This is clear in (i).
+        \item if $f \phi$ is integrable with respect to $\mu$, then (i) holds.
+    \end{enumerate}
+\end{proposition}
+
+\section{Integration with respect to the Lebesgue measure on the real line}%
+\label{sec:Integration with respect to the Lebesgue measure on the real line}
+
+\begin{definition}[]
+    \label{def:9.3}
+    Consider the measure space $(\mathbb{R}, \mathfrak{B}(\mathbb{R}), \lambda)$, where $\lambda$
+    is the Lebesgue measure on the Borel $\sigma$-field $\mathfrak{B}(\mathbb{R})$. In accordance
+    with Definition ~\ref{def:8.5}, a $\mathfrak{B}(\mathbb{R})$ measurable function
+    $f: \mathbb{R} \to \overline{\mathbb{R}}$ is Lebesgue integrable if
+    $\int_{\mathbb{R}} |f(x)| \lambda(dx) < \infty$. The integral of $f$ with respect to $\lambda$
+    is denoted with $\int_{\mathbb{R}}f(x)dx$, i.e., $\int_{\mathbb{R}} f(x)dx = 
+    \int_{\mathbb{R}} f(x)\lambda(dx)$. If $E \subset \mathbb{R}$ and $\lambda|_E$ is the
+    restriction of $\lambda$ to $\mathfrak{B}(E)$ (cf. Definiton ~\ref{def:4.2}), then a 
+    $\mathfrak{B}(E)$ measurable function $f: E \to \overline{\mathbb{R}}$ is referred to as 
+    Lebesgue integrable if $\int_{E} |f(x)| \lambda|_E (dx) < \infty$. Also in this case we write
+    $\int_{E} |f(x)| \lambda|_E (dx) = \int_{E} f(x)dx$.
+\end{definition}
+
+In accordance with the fact that the Lebesgue measure of a single point is zero, we adapt the
+following definition.
+
+\begin{definition}[]
+    \label{def:9.4}
+    TODO. Interesting but easy and well known.
+\end{definition}
+
+We review the definition of a Riemann integrable function:
+
+\begin{definition}[title]
+    \label{def:title}
+    
+\end{definition}
+
+

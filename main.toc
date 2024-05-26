@@ -1,0 +1,42 @@
+\contentsline {chapter}{\numberline {1}Introduction: Part I}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sets}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}The principle of induction}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Order structure of the real numbers}{3}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Introduction: Part II}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Functions}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Cardinality of Sets}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Euclidean distance}{4}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Introduction: Part III}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Real valued sequences}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Measurable sets: Part I}{6}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Measurable spaces}{6}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Measurable sets: Part II}{7}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Measure spaces}{7}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Semirings}{7}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Measurable sets: Part III}{8}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Measure extensions}{8}{section.6.1}%
+\contentsline {paragraph}{Why do we say $A \in \mathcal {P}(\Omega )$ instead of $A \in \Omega $?}{8}{section*.3}%
+\contentsline {paragraph}{Important from Example 6.1 (Script)}{9}{section*.4}%
+\contentsline {paragraph}{Define $\ell ^\ast $}{9}{section*.6}%
+\contentsline {chapter}{\numberline {7}Measurable functions}{10}{chapter.7}%
+\contentsline {section}{\numberline {7.1}The concept of measurable functions}{10}{section.7.1}%
+\contentsline {paragraph}{Thinking about $f^{-1}((-\infty , x))$}{10}{section*.7}%
+\contentsline {paragraph}{Define $\mathbbm {1}_A(\omega )$}{10}{section*.8}%
+\contentsline {section}{\numberline {7.2}Functions taking values in the extended real numbers}{11}{section.7.2}%
+\contentsline {paragraph}{Remark 7.2}{12}{section*.9}%
+\contentsline {paragraph}{Remark 7.3}{12}{section*.10}%
+\contentsline {section}{\numberline {7.3}Sequence of measurable functions}{12}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Integration: Part I}{13}{chapter.8}%
+\contentsline {section}{\numberline {8.1}The integral for non-negative functions}{13}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Integrable functions}{14}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Fatou's lemma and Lebesgue's dominated convergence theorem}{15}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Integration: Part II}{16}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Pushforward measure}{16}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Densities}{16}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Integration with respect to the Lebesgue measure on the real line}{17}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Lecture}{18}{section.9.4}%
+\contentsline {chapter}{\numberline {10}General notions in Probability}{20}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Probability spaces}{20}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Random variables and random vectors}{20}{section.10.2}%
+\contentsline {chapter}{\numberline {11}Collection of random vectors}{21}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Independence}{21}{section.11.1}%

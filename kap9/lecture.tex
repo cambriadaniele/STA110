@@ -1,0 +1,123 @@
+\section{Lecture}%
+\label{sec:Lecture}
+
+Partial integration and substitution TODO.
+
+\begin{exercise}[9.6]
+    \label{ex:9.6}
+    $\nu$ is a measure with density $\phi$ with respect to $\mu$.
+    f nonnegative and $\mathcal{F}$ measurable.
+    Prove:
+    \begin{enumerate}[label=(\roman*)]
+        \item $\int_A f(\omega) \nu(d\omega) = \int_{A} f(\omega) \phi(w)\mu(d\omega)$
+        \begin{enumerate}
+            \item[NOTE] $\nu(d\omega) = \phi(\omega)\mu(d\omega)$ short notation for $\nu$ has density $\phi$:
+
+            1. Definition of $\nu$ having a density $\phi$ with respect to $\mu$: When we say that $\nu$ has a 
+            density $\phi$ with respect to $\mu$, it means that for any measurable set $A \in \mathcal{F}$, 
+            the measure $\nu$ of $A$ can be computed as:
+               \[
+               \nu(A) = \int_A \phi(\omega) \mu(d\omega).
+               \]
+               This is the integral of the function $\phi$ over the set $A$, with respect to the measure $\mu$. 
+
+            2. Notation $\nu(d\omega) = \phi(\omega)\mu(d\omega)$: This notation is shorthand and is used to express 
+            how $\nu$ acts on infinitesimal elements in a manner analogous to how $\mu$ acts, but scaled by the function 
+            $\phi$. It is essentially saying that for a small element $d\omega$, 
+            the measure $\nu(d\omega)$ is given by $\phi(\omega)\mu(d\omega)$.
+
+            3. Clarification on $\int_{d\omega} \phi(\omega)\mu(d\omega)$: 
+            The correct notation or expression should not involve integrating over an "infinitesimal element" $d\omega$. 
+            The differential notation $\nu(d\omega) = \phi(\omega)\mu(d\omega)$ is symbolic and used to express 
+            the relationship between $\nu$ and $\mu$ at a small scale, rather than an actual operation.
+
+            In summary, $\nu(d\omega) = \phi(\omega)\mu(d\omega)$ is a concise way to denote that $\nu$ is derived by 
+            weighting $\mu$ by the density $\phi$, and this relationship is used to transform integrals with respect to $\nu$ 
+            into integrals with respect to $\mu$ weighted by $\phi$.
+        \end{enumerate}
+        \item $f$ integrable w.r.t. $\nu$ $\iff$ $f \phi$, ($f(\omega)\phi(\omega)$), integrable w.r.t. $\mu$.
+        \item if either of the two statments in (ii) holds, then (i) holds.
+    \end{enumerate}
+
+    Proof: \\
+    (i). 
+    Let $f$ be a standard simple function, 
+    $f = \sum_{n=1}^{\mathbb{N}} \alpha_i \mathbbm{1}_{Ai}$, then
+    \[
+    \int_{A} f(\omega) \nu(d\omega) 
+    = \int_{A}  (\sum_{n=1}^{\mathbb{N}} \alpha_i \mathbbm{1}_{Ai}(\omega))\nu(d\omega)
+    = \sum_{n=1}^{\mathbb{N}} \alpha_i \int_{A} \mathbbm{1}_{Ai} (\omega)\nu(d\omega) 
+    = \sum_{n=1}^{\mathbb{N}} \alpha_i\int_{\Omega} \mathbbm{1}_A(\omega) \mathbbm{1}_{Ai} (\omega) \nu(d\omega) 
+    \] 
+    \[
+    = \sum_{n=1}^{\mathbb{N}} \alpha_i \int_{\Omega} \mathbbm{1}_{A \cap  A_i}(\omega)\nu(d\omega)
+    = \sum_{n=1}^{\mathbb{N}} \alpha_i \nu(A \cap  A_i)
+    = \sum_{n=1}^{\mathbb{N}} \alpha_i \int_{A \cap  A_i} \phi(\omega) \mu(d\omega)
+    = \sum_{n=1}^{\mathbb{N}} \alpha_i \int_{A} \mathbbm{1}_{A_i} (\omega) \phi(\omega) \mu(d\omega)
+    \] 
+    \[
+    = \int_{A} \sum_{n=1}^{\mathbb{N}} \alpha_i \mathbbm{1}_{A_i} (\omega) \phi(\omega) \mu(d\omega)
+    = \int_{A} f(\omega) \phi(w) \mu(d\omega)
+    .\] 
+
+    Hence we have verified (i) if $f$ is standard and simple. \\
+    In order to verify it for nonnegative functions: \\
+    (IMPORTANT; TOOL, TO ADD)
+    Recall (chapter 7): Any $f$ nonnegative and $\mathcal{F}$ measurable can be approximated by a
+    standard simple function, i.e., $\exists (f_n)_{n\in \mathbb{N}}$ s.t. $f_n(\omega) \uparrow f(\omega)$.
+    By the monotone convergence theorem,
+    \[
+    \int_{\Omega} f(\omega)\nu(d\omega)= \lim_{n \to \infty} \int_{\Omega} f_n(\omega)\nu(d\omega)
+    = \lim_{n \to \infty} \int_{\Omega} f_n(\omega) \phi(\omega) \mu(d\omega)
+    \] 
+    $f_n$ converges to $f$
+     \[
+         \stackrel{\text{(again monotone convergence)}}{=} \int_{\Omega} f(\omega) \phi(\omega) \mu(d\omega)
+    .\] 
+    This proves (i).
+
+    (ii). 
+    $\int_{A} |f(\omega)| \nu(d\omega) < \infty$ (definition of integrability),
+    $= \int_{A} |f(\omega) \phi(\omega)| \mu(d\omega)$, and we know that the equality holds by (i).
+    This shows (ii).
+
+    (iii). 
+    Recall $f^{+} = max(f, 0)$, $f^{-} = max(-f, 0)$.
+    Positive and negative parts of f. Cuts out all negative points. We know,
+    \[
+    f(\omega) = f^{+} - f^{-}(\omega)
+    .\] 
+    f integrable w.r.t. $ \nu$ implies that,
+    \[
+    \int_{\Omega} f(\omega)\nu(d\omega) = \int_{\Omega} f^{+}\nu(d\omega) - \int_{\Omega} f^{-}(\omega)\nu(d\omega)
+    .\] 
+    By (i) applied to $f^{+} \text{ and } f^{-}$,
+    \[
+    = \int_{\Omega} f^{(+)}(\omega) \phi(\omega)\mu(d\omega) - \int_{\Omega} f^{-}(\omega) \phi(\omega) \mu(d\omega)
+    = \int_{\Omega} f(\omega) \phi(\omega) \mu(d\omega)
+    .\] 
+\end{exercise}
+
+\begin{exercise}[9.7]
+    \label{ex:9.7}
+    b) TODO\\
+    $\frac{1}{2\pi} \int_{\mathbb{R}^{2}} e^{-(\frac{x^{2}+y^{2}}{2})}d(x,y)$, continuoius as composition of continuous
+    functions, and nonnegative. Fobini - Tonelli Theorem:
+    \[
+    = \frac{1}{2\pi} \int_{\mathbb{R}} e^{-\frac{x^{2}}{2}} (\int_{\mathbb{R}} e^{-\frac{y^{2}}{2}}dy) dx
+    .\] 
+    \[
+    = \frac{1}{2\pi} (\int_{\mathbb{R}} e^{\frac{-x^{2}}{2}} dx)^{2}
+    .\] 
+    u = $\frac{x}{\sqrt{2} }$ substitute
+    \[
+    = \frac{1}{2\pi} (\int_{\mathbb{R}} e^{-u^{2}} \sqrt{2} du)^{2}
+    .\] 
+    \[
+    = \frac{1}{\pi} (\int_{\mathbb{R}} e^{-u^{2}}du)^{2} = \frac{\pi}{\pi}
+    .\] 
+    Remember Gaussian integral:
+    \[
+    \int_{\mathbb{R}} e^{-x^{2}}dx = \sqrt{\pi} 
+    .\] 
+\end{exercise}
