@@ -3,14 +3,26 @@
 \section{Measurable spaces}%
 \label{sec:Measurable spaces}
 
+\begin{definition}[$\sigma$-field]
+    \label{def:4.1}
+    Let $\Omega$ be a nonempty set. A family of subsets $\mathcal{F}$ of $\Omega$ is called
+    a $\sigma$-field on $\Omega$ if the following three itmes are statisfied:
+    \begin{enumerate}[label=(\roman*)]
+        \item $\Omega \in \mathcal{F}$;
+        \item $A \in \mathcal{F} \Rightarrow A^{c} \in \mathcal{F}$;
+        \item if $\{ A_i: i \in  \mathbb{N}\} $ is a collection of sets s.t. $A_i \in \mathcal{F}$ 
+            for any $i \in \mathbb{N}$, then $\bigcup_{i \in \mathbb{N}} A_i \in \mathcal{F}$.
+    \end{enumerate}
+\end{definition}
+
 \begin{definition}[]
     \label{def:4.2}
     4.2 TODO
 \end{definition}
+
 \begin{definition}[Measurable space]
     \label{def:4.3}
     let $\Omega \neq \emptyset$ and $\mathcal{F}$ be a $\sigma$-field on $\Omega$. The pair $(\Omega, \mathcal{F}$ is referred 
     to as a measurable space. if $A \in \mathcal{F}$, then A is said to be measurable. if $A\subset \mathcal{F}$ and
     $\mathcal{A}$ is a $\sigma$-field on $\Omega$, $\mathcal{A}$ is referred to as a sub-$\sigma$-field on $\Omega$.
-    
 \end{definition}

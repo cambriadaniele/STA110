@@ -42,3 +42,4 @@
 \contentsline {chapter}{\numberline {11}Collection of random vectors}{22}{chapter.11}%
 \contentsline {section}{\numberline {11.1}Independence}{22}{section.11.1}%
 \contentsline {section}{\numberline {11.2}Lecture}{23}{section.11.2}%
+\contentsline {chapter}{\numberline {12}Mock exam 1}{25}{chapter.12}%

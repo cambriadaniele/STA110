@@ -1,0 +1,66 @@
+\chapter{Mock exam 1}%
+\label{cha:Mock exam 1}
+Solve with the pdf of the mock exam on the side.
+
+\textbf{Notation:} We recall some of the terminology:
+\begin{itemize}
+    \item Given a nonempty set $\Omega$, $\mathcal{P}(\Omega)$ is the power set on $\Omega$;
+    \item $\mathfrak{B}(\mathbb{R}^k)$ denotes the Borel $\sigma$-field on $\mathbb{R}^k$, $k \geq 1$;
+    \item The measure
+    \[
+    \mu(A) = 
+    \begin{cases} 
+    \#A, & \text{if } A \text{ is finite} \\
+    \infty, & \text{otherwise},
+    \end{cases}
+    \quad A \in \mathcal{P}(\Omega),
+    \]
+    is referred to as the counting measure on $\mathcal{P}(\Omega)$;
+    \item Given a measurable space $(\Omega, \mathcal{F})$ and $x \in \Omega$, we write $\delta_x$ for the measure
+    \[
+    \mathcal{F} \ni A \mapsto \delta_x(A) = 
+    \begin{cases} 
+    1, & \text{if } x \in A \\
+    0, & \text{otherwise}.
+    \end{cases}
+    \]
+\end{itemize}
+
+\begin{exercise}[]
+    \label{ex:mock1}
+    \begin{enumerate}[label=(\alph*)] \hfill
+        \item Refer to Def. ~\ref{def:4.1}.
+        \item Measure on $\mathcal{F}$ (cf. Def ~\ref{def:5.1}).
+            \begin{itemize}
+
+                \item 
+                    \begin{enumerate}[label=(\roman*)]
+                        \item $\mu_1(\emptyset) = C\mu(\emptyset)= 0$;
+                        \item We know that item ii holds for the counting measure by definition. For our redefined
+                            counting measure,
+                            \[
+                            \mu_1(\bigcup_{i \in \mathbb{N}} A_i) = C\mu(\bigcup_{i \in \mathbb{N}} A_i)
+                            = C \sum_{i \in \mathbb{N}}^{ } \mu(A_i) = \sum_{i \in \mathbb{N}}^{ } C\mu(A_i)
+                            = \sum_{i \in \mathbb{N}}^{ } \mu_1(A_i)
+                            .\] 
+                    \end{enumerate}
+
+                \item
+                    \begin{enumerate}[label=(\roman*)]
+                        \item $\mu_2(\emptyset) = \int_{\emptyset} f(\omega)\mu(d\omega) = 0$;
+                        \item 
+                            \[
+                            \mu_2(\bigcup_{i \in \mathbb{N}} A_i) = \int_{\bigcup_{i \in \mathbb{N}} A_i} f(\omega)\mu(d\omega)
+                            = 
+                            .\] 
+                    \end{enumerate}
+
+                \item
+                    \begin{enumerate}[label=(\roman*)]
+                        \item $\mu_3(\emptyset) = \frac{1}{2} + \lambda(\emptyset) = \frac{1}{2}$. 
+                    \end{enumerate}
+
+            \end{itemize}
+            We see that  $\mu_3$ is clearly not a measure on $\mathcal{F}$.
+    \end{enumerate}
+\end{exercise}
