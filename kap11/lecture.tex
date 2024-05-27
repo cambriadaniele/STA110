@@ -1,0 +1,105 @@
+\section{Lecture}%
+\label{sec:Lecture11}
+
+\begin{exercise}[]
+    \label{ex:11.7}
+    $X_1, \ldots, X_n$ independent discrete uniform, on $\{1, \ldots, p\} $, $p \in \mathbb{N}$.
+    Meaning that each $X_i$ can take any value in $\{1, \ldots, p\} $ with equal probability $\frac{1}{p}$.
+    Find the law of $M = max \{X_1, \ldots, X_n\} $.
+
+    Note, Let $X$ be discrete uniform on $\{1, \ldots, p\} $, then the support of $X$ is
+    $\{1, \ldots, p\} $. (The set of all values s.t. $\mathbb{P}(X=x)>0$)
+
+    The support of $M$ also is $\{1, \ldots, p\} $. Why?
+    \[
+    \mathbb{P}(M \not\in  \{1, \ldots, p\} ) \le  \mathbb{P}(\bigcup_{i = 1} ^{n} \{X_i \not\in \{1, \ldots,p\} \} )
+    \le \sum_{i=1}^{n} \mathbb{P}(X_i \not\in \{1,\ldots,p\} ) = 0
+    .\] 
+    \[
+    \Rightarrow \mathbb{P}(M \not\in \{1,\ldots,p\} ) = 0 \Rightarrow \mathbb{P}(M \in \{1, \ldots, p\} )=1
+    .\] 
+
+    Let $t \in \mathbb{R}$, 
+    \[
+    \mathbb{P}(M \le t) = F_M (t) = \mathbb{P}(max \{X_1, \ldots, X_n\} \le  t)
+    = \mathbb{P}(\bigcap _{1 = 1} ^{n} \{x_i \le t\} )
+    .\] 
+    \[
+    \stackrel{\text{independence}}{=} \prod_{i=1}^{n} \mathbb{P}(X_i \le t)
+    =\prod_{i=1}^{n}P_{X_i}((-\infty, t]) = \mathbb{P}(X \le t)^{n}
+    .\] 
+    Then, the law of X is,
+    \[
+    \mathbb{P}(X\le t) = 
+    \begin{cases}
+        0, & t<1 \\
+        \frac{\# \{k: k\le t\} }{p}  & 1\le t\le p \\ 
+        1, & t\ge p
+    \end{cases}
+    .\] 
+    And the law of M,
+    \[
+    F_M(t)=\mathbb{P}(X\le t)^{n} =
+    \begin{cases}
+        0, & t<1 \\
+        (\frac{\# \{k: k\le t\} }{p})^{n}, & 1 \le t\le p \\
+        1, & t>p
+    \end{cases}
+    .\] 
+
+    Also note, as it is discrete,
+    \[
+    F_M(i) - F_M(i+1) = \sum_{k=1}^{i} \mathbb{P}(M=k) - \sum_{k=1}^{i-1} \mathbb{P}(M=k) = \mathbb{P}(M = i)
+    .\] 
+
+\end{exercise}
+
+\begin{exercise}[]
+    \label{ex:11.8}
+    $X_1, X_2$ Poisson with parameters $\lambda$ and $\mu$ respectively.
+    What is the law of $X_1 + X_2$?
+
+    Note in general, for $X_1 + X_2 = z$:
+
+    Discrete case, $E_1 + E_2 = E_{sum}$, get support of $X_1, X_2$, and then,
+    $\forall z \in Z_{SUM}$, 
+    \[
+    P_Z(\{z\} ) = \sum_{X_2 \in E_2}^{ } P_{X_1}(\{z-x_2\} )P_{X_2}(\{x_2\} )
+    .\] 
+
+    Continuous case, (densities $\phi_1, \phi_2$), density of $Z$ 
+    \[
+    \phi(z) = \int_{\mathbb{R}} \phi_1(z-x_2)\phi_2(x_2)dx_2
+    .\] 
+
+    Let $E_1 = \mathbb{N} \cup \{0\} $, $ E_2 = \mathbb{N} \cup \{0\} $, the support is
+    \[
+    E_1 + E_2 = \mathbb{N} \cup  \{0\} \stackrel{\text{by definition}}{=}
+    \{x_1 + x_2: x_1 \in  E_1, x_2 \in E_2\} 
+    .\] 
+    Knowing the support helps us,
+    we know where we can sum. Here we know that for $k>z$, $P_{X_1} = 0$.
+    We then apply the formula for the discrete case:
+    \[
+    P_Z(\{z\} ) = \sum_{k \in \mathbb{N} \cup \{0\} }^{ } P_{X_1}(\{z-k\} )P_{X_2}(\{k\} ) 
+    \stackrel{\text{for $k>z$, $P_{X_1} = 0$}}{=} \sum_{k=0}^{z} P_{X_1}(\{z-k\} )P_{X_2}(\{k\} )
+    \] 
+    \[
+    \stackrel{\text{plug in distribution}}{=} \sum_{k=0}^{z} e^{-\lambda} \frac{\lambda^{(z-k)}}{(z-k)!} e^{-\mu} \frac{\mu^{k}}{k!}
+    = e^{-(\lambda + \mu)} \sum_{k=0}^{z} \frac{1}{(z-k)!k!}\mu^{k}\lambda^{(z-k)} 
+    \] 
+    Use binomial theorem, $(\mu + \lambda)^{z} = \sum_{k=0}^{z} \binom{z}{k} \mu^{k} \lambda^{(z-k)}$. Multiply by
+    $z!$ inside and divide outside of the sum.
+    \[
+    = \frac{e^{-(\lambda + \mu)}}{z!} \sum_{k=0}^{z} \frac{1\times z!}{(z-k)!k!}\mu^{k}\lambda^{(z-k)} 
+    = e^{-(\lambda+\mu)} \frac{(\mu+\lambda)^{z}}{z!}
+    .\] 
+    Hence, 
+    \[
+    P_Z(\{z\} ) 
+    = e^{-(\lambda+\mu)} \frac{(\mu+\lambda)^{z}}{z!}
+    .\] 
+    Note, we see that the law is the same as before, with the parameters added.
+
+\end{exercise}
+

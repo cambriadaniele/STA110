@@ -41,3 +41,4 @@
 \contentsline {section}{\numberline {10.3}Discrete laws}{21}{section.10.3}%
 \contentsline {chapter}{\numberline {11}Collection of random vectors}{22}{chapter.11}%
 \contentsline {section}{\numberline {11.1}Independence}{22}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Lecture}{23}{section.11.2}%
