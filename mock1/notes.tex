@@ -106,7 +106,65 @@ Solve with the pdf of the mock exam on the side.
                 \item $P(A) = (1-p)\delta_0(A) + p \delta_1(A)$, $A \in \mathfrak{B}(\mathbb{R})$, $p \in (0,1)$.
                     \[
                     \int_{\mathbb{R}} (x-p)^{2}P(dx)
+                    = \int_{\mathbb{R}} (x-p)^{2} ((1-p)\delta_0(dx)) + \int_{\mathbb{R}} (x-p)^{2}(p\delta_1(dx))
+                    = (0-p)^{2}(1-p) + (1-p)^{2}p
                     \] 
+                    \[
+                    = p^{2} -p^{3} + p + p^{3} -2p^{2} = p-p^{2}
+                    .\] 
+                \item $\lambda$ Lebesgue measure on $\mathfrak{B}(\mathbb{R})$. As the Lebesgue measure of a singleton 
+                    is equal to $0$
+                    \[
+                    \int_{\mathbb{N}} \log(x)\lambda(dx) = 0
+                    .\] 
             \end{enumerate}
+        \item
+            Refer to Def. ~\ref{def:10.5}, Prop. ~\ref{prop:10.2}.
+            \begin{enumerate}[label=\arabic*.]
+                \item The support is $E=\{0,1\} $, countable.
+                    \[
+                    P_1(E) = \frac{1}{2} \cdot 1 + \frac{1}{2} \cdot 1 = 1
+                    .\] 
+                \item As $F_X$ is continuous, $\mathbb{P}(X=x)=0$, $\forall x \in \mathbb{R}$. This means that there exists
+                    no countable set $E$ s.t. $P_X(E)=1$.
+                \item The support is $E=\{0,1\} $, countable.
+                    \[
+                    P_3(A) = \mathbb{P}(X=1)\cdot \delta_1(A) + \mathbb{P}(X=0)\cdot \delta_0(A)
+                    .\] 
+                    Where $\mathbb{P}(X=1) = \mathbb{P}(X^{-1}(1)) = \mathbb{P}(h)$.
+            \end{enumerate}
+            $P_2$ is not a discrete law.
+        \item  TODO: Understand and complete. Cf. Sec. ~\ref{sec:Gauss vectors}.
+
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[]
+    \label{ex:12.2}
+    Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space and $X$ be a discrete random variable on $\Omega$ with 
+    support $\{-1,1\} $ and law
+    \[
+    P_X(A)= \frac{1}{2} \delta_{-1}(A)+\frac{1}{2}\delta_1(A)
+    .\] 
+    \begin{enumerate}[label=(\alph*)]
+        \item
+            $\mathbb{P}(X=-1)= P_X(\{-1\} ) = \frac{1}{2}$,
+            $\mathbb{P}(X=1) = \frac{1}{2}$
+        \item We have that $f(X)=|X|^{2}$, cf. Prop. ~\ref{prop:10.3}
+            \[
+            \mathbb{E}(|X|^{2}) = \int_{\{-1,1\} }|x|^{2}P_X(dx) = |-1|^{2} \cdot P_X(\{-1\} )+ |1|^{2}\cdot P_X(\{1\} )
+            =1\cdot \frac{1}{2} + 1\cdot \frac{1}{2} =1
+            .\] 
+        \item $\mathbb{E}[X] = -\frac{1}{2} + \frac{1}{2}= 0$. We than know that
+            \[
+            Var(X) =\mathbb{E}[X^{2}] - \mathbb{E}[X]^{2} = 1-0=1
+            .\] 
+        \item
+            We can find the support of $\frac{X+1}{2}$.
+            \[
+                \mathbb{P}(\frac{X+1}{2}=\omega)\neq 0 \Rightarrow X = 2\omega - 1 = \{-1,1\} 
+            .\] 
+            For $2\omega-1 = -1$, $\omega=0$, and for  $2\omega-1 = 1$,  $\omega=1$. The support of  $\frac{X+1}{2}$ is $\{0,1\} $.
+
     \end{enumerate}
 \end{exercise}
