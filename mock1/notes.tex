@@ -30,9 +30,9 @@ Solve with the pdf of the mock exam on the side.
     \label{ex:mock1}
     \begin{enumerate}[label=(\alph*)] \hfill
         \item Refer to Def. ~\ref{def:4.1}.
+
         \item Measure on $\mathcal{F}$ (cf. Def ~\ref{def:5.1}).
             \begin{itemize}
-
                 \item 
                     \begin{enumerate}[label=(\roman*)]
                         \item $\mu_1(\emptyset) = C\mu(\emptyset)= 0$;
@@ -51,7 +51,9 @@ Solve with the pdf of the mock exam on the side.
                         \item 
                             \[
                             \mu_2(\bigcup_{i \in \mathbb{N}} A_i) = \int_{\bigcup_{i \in \mathbb{N}} A_i} f(\omega)\mu(d\omega)
-                            = 
+                            \stackrel{\text{Tool ~\ref{tool:8.9}}}
+                            {=} \sum_{i \in \mathbb{N}}^{ }\int_{A_i}  f(\omega)\mu(d\omega) 
+                            = \sum_{i \in N}^{ } \mu_2(A_i)
                             .\] 
                     \end{enumerate}
 
@@ -59,8 +61,52 @@ Solve with the pdf of the mock exam on the side.
                     \begin{enumerate}[label=(\roman*)]
                         \item $\mu_3(\emptyset) = \frac{1}{2} + \lambda(\emptyset) = \frac{1}{2}$. 
                     \end{enumerate}
-
             \end{itemize}
             We see that  $\mu_3$ is clearly not a measure on $\mathcal{F}$.
+
+        \item Probability measure cf. Def. ~\ref{def:10.1}.
+            \begin{itemize}
+                \item 
+                    \[
+                    P_1(\mathbb{R}) = \int_{\mathbb{R}} \mathbbm{1}_{[0, \infty)}(x) e^{-x}dx
+                    = \int_{[0, \infty)} e^{-x}dx 
+                    = (-e^{-x})|_0^{\infty} = (0 - (-1)) = 1
+                    .\] 
+                \item
+                    \[
+                    P_2(\mathbb{N}) = \int_{\mathbb{N}} \mathbbm{1}_{\{0,1\} }(x) x^{2}\mu(dx) 
+                    = \int_{\{0,1\} } x^{2}\mu(dx) = 0^{2}\cdot \mu(\{0\} ) + 1^{2}\cdot \mu(\{1\} ) 
+                    = 0\cdot 1 + 1 \cdot 1 = 1
+                    .\] 
+                \item
+                    \begin{tool}[Integral with respect to a dirac measure]
+                        \label{tool:iwrtadm} 
+                        \[
+                        \int_{\Omega} f(x) \delta_\omega(dx) = f(\omega)
+                        .\] 
+                    \end{tool}
+                    \[
+                    P_3(\mathbb{R}) = \int_{\mathbb{R}} x^{2}\mu(dx) 
+                    = \int_{\mathbb{R}} x^{2} (\delta_{-1}(dx)+ \delta_1(dx))
+                    = \int_{\mathbb{R}} x^{2} \delta_{-1}(dx) + \int_{\mathbb{R}}x^{2} \delta_1(dx)
+                    \] 
+                    \[
+                    = (-1)^{2} + 1^{2} = 2
+                    .\] 
+            \end{itemize}
+            We see that $P_3$ is not a probability measure on $\mathcal{B}$.
+
+        \item Calculate:
+            \begin{enumerate}[label=\arabic*.]
+                \item $\lambda$ Lebesgue measure on $\mathfrak{B}(\mathbb{R})$.
+                    \[
+                    \int_{\mathbb{R}} \mathbbm{1}_{[-1,1]}(x) \lambda(dx)
+                    = \int_{[-1,1]} 1 \lambda(dx) = 1 \cdot \lambda([-1,1]) = 1 \cdot 2 = 2
+                    .\] 
+                \item $P(A) = (1-p)\delta_0(A) + p \delta_1(A)$, $A \in \mathfrak{B}(\mathbb{R})$, $p \in (0,1)$.
+                    \[
+                    \int_{\mathbb{R}} (x-p)^{2}P(dx)
+                    \] 
+            \end{enumerate}
     \end{enumerate}
 \end{exercise}

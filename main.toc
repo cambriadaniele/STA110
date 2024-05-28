@@ -30,6 +30,7 @@
 \contentsline {section}{\numberline {8.1}The integral for non-negative functions}{13}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Integrable functions}{14}{section.8.2}%
 \contentsline {section}{\numberline {8.3}Fatou's lemma and Lebesgue's dominated convergence theorem}{15}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Integration over measurable sets}{15}{section.8.4}%
 \contentsline {chapter}{\numberline {9}Integration: Part II}{16}{chapter.9}%
 \contentsline {section}{\numberline {9.1}Pushforward measure}{16}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Densities}{16}{section.9.2}%

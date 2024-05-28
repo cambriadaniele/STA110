@@ -204,6 +204,7 @@ part of the function, but reflected by the x-axis. The result is positive. Also 
     .\] 
 \end{proposition}
 
+
 \section{Fatou's lemma and Lebesgue's dominated convergence theorem}%
 \label{sec:Fatou's lemma and Lebesgue's dominated convergence theorem}
 
@@ -217,5 +218,18 @@ part of the function, but reflected by the x-axis. The result is positive. Also 
     .\] 
 \end{proposition}
 
+\section{Integration over measurable sets}%
+\label{sec:Integration over measurable sets}
+
+\begin{tool}[Integration over $\bigcup_{i \in I} A_i$]
+    \label{tool:8.9}
+    (From Ex. 8.9).
+    Let $(\Omega, \mathcal{F}, \mu)$ be a measure space and $f: \Omega \to \overline{\mathbb{R}}$ be a
+    $\mathcal{F}$ measurable function. Suppose that either $f$ is nonnegative of integrable and let
+    $\{A_i: i \in  I\} \subset \mathcal{F}$ be disjoint, where $I \subset \mathbb{N}$. Then
+    \[
+    \int_{\bigcup_{i \in I} A_i} f(\omega)\mu(d\omega) = \sum_{i \in I}^{ } \int_{A_i} f(\omega)\mu(d\omega)
+    .\] 
+\end{tool}
 
 
