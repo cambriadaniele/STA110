@@ -155,8 +155,24 @@ i.e., $X$ is a discrete random vector according to Def. ~\ref{def:10.5}.
     For example, for $B = (2, 4]$, $X^{-1}(B) = \emptyset \in \mathcal{P}(\Omega)$, and
     $P_X(B) = P_X(\emptyset) = 0$. Also note that, for example, $\mathbb{P}(X=0) 
     = \mathbb{P}(X^{-1}(0)) = \mathbb{P}(t) = 1-p$.
-
 \end{example}
+\textbf{Classical examples of discrete probability distributions}
+
+\begin{myexample}[Examples of discrete probability distributions]
+    \label{myex:Examples_of_discrete_probability_distributions} \hfill
+
+\textbf{Discrete uniform:} $E \subset \mathbb{R}$ is a finite set s.t. $\#E=n$, and $p_x = \frac{1}{n}$ for any $x \in E$.
+
+\textbf{Bernoulli:} $E = \{0,1\} $ and $p_0 = 1-p$ and $p_1 = p$, $p \in [0,1]$.
+
+\textbf{Binomial:} $E=\{0,1, \ldots, n\} $, $n \in \mathbb{N}$ and $p_x=\binom{n}{x} p^{x}(1-p)^{n-x}$, $p \in [0,1]$.
+
+\textbf{Geometric:} $E = \mathbb{N}$ and $p_x = (1-p)^{x-1}p$, $p \in (0,1)$.
+
+\textbf{Poisson:} $E= \mathbb{N} \cup \{0\} $ and $p_x = (\frac{\lambda}{x!})e^{-\lambda}$, $\lambda>0$.
+
+\textbf{Multinomial:} TODO: Write multinomial discrete probability distribution.
+\end{myexample}
 
 \section{Continuous laws}%
 \label{sec:Continuous laws}

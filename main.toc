@@ -40,11 +40,11 @@
 \contentsline {section}{\numberline {10.1}Probability spaces}{20}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Random variables and random vectors}{20}{section.10.2}%
 \contentsline {section}{\numberline {10.3}Discrete laws}{21}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Continuous laws}{21}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Expectation}{21}{section.10.5}%
-\contentsline {chapter}{\numberline {11}Collection of random vectors}{22}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Independence}{22}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Sums of independent random vectors}{22}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Gauss vectors}{22}{section.11.3}%
-\contentsline {section}{\numberline {11.4}Lecture}{23}{section.11.4}%
-\contentsline {chapter}{\numberline {12}Mock exam 1}{25}{chapter.12}%
+\contentsline {section}{\numberline {10.4}Continuous laws}{22}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Expectation}{22}{section.10.5}%
+\contentsline {chapter}{\numberline {11}Collection of random vectors}{23}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Independence}{23}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Sums of independent random vectors}{23}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Gauss vectors}{23}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Lecture}{24}{section.11.4}%
+\contentsline {chapter}{\numberline {12}Mock exam 1}{26}{chapter.12}%
