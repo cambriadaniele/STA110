@@ -165,6 +165,37 @@ Solve with the pdf of the mock exam on the side.
                 \mathbb{P}(\frac{X+1}{2}=\omega)\neq 0 \Rightarrow X = 2\omega - 1 = \{-1,1\} 
             .\] 
             For $2\omega-1 = -1$, $\omega=0$, and for  $2\omega-1 = 1$,  $\omega=1$. The support of  $\frac{X+1}{2}$ is $\{0,1\} $.
+            TODO: Finish explaining
+        \item
 
     \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[]
+    \label{ex:12.3}
+\end{exercise}
+\begin{exercise}[]
+    \label{ex:12.4}
+\end{exercise}
+\begin{exercise}[]
+    \label{ex:12.5}
+    Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space and $X$ be a discrete random variable on $\Omega$ with 
+    support $\{1,\ldots, N\} $, where $N\ge 2$ and $N$ is even. Suppose that $X$ has law defined upon:
+    \[
+    \mathbb{P}(X=k) = C_N max \{k, N-k\}, \quad k=1,\ldots,N
+    ,\] 
+    Where $C_N \in \mathbb{R}$. Find $C_N$.
+
+    As $N$ is even, we can find a middle point $m = \frac{N}{2}$. I will use $N=2m$.
+    \begin{align*}
+    \sum_{k=1}^{N} \mathbb{P}(X = k) &= C_N(\sum_{k=1}^{m} (2m - k) + \sum_{k=m+1}^{2m} k )\\
+    &= C_N(\sum_{k=1}^{m} (2m - k) + \sum_{j=1}^{m} (m + j)) \\
+    &= C_N(2m\cdot m - \sum_{k=1}^{m} k + m\cdot m  + \sum_{j=1}^{m} j) \\
+    &= C_N(3m^{2}) \\
+    &= C_N(3(\frac{N}{2})^{2})
+    \end{align*}
+    By definition
+    \[
+    C_N(\frac{3N^{2}}{4}) = 1 \Rightarrow C_N = \frac{4}{3N^{2}}
+    .\] 
 \end{exercise}
