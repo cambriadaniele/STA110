@@ -52,7 +52,7 @@
     \begin{enumerate}[label=(\roman*)]
         \item for any nonnegative and $\mathcal{F}$ measurable function $f$,
             \[
-            \int_{A} f(\omega)\nu(d\omega) = \int_{A} f(\omega)\phi(w)\nu(d\omega), \quad
+            \int_{A} f(\omega)\nu(d\omega) = \int_{A} f(\omega)\phi(w)\mu(d\omega), \quad
             A \in \mathcal{F};
             \] 
         \item $f$ is integrable with respect to $\nu$ if and only if $f \phi$ (the product
@@ -94,4 +94,25 @@ We review the definition of a Riemann integrable function:
     
 \end{definition}
 
+\section{Change of variable}%
+\label{sec:Change of variable}
 
+\section{Integration on product spaces}%
+\label{sec:Integration on product spaces}
+
+\begin{definition}[Product $\sigma$-field]
+    \label{def:9.9}
+    Let $(X, \mathscr{X})$ and $(Y, \mathscr{Y})$ be two measurable spaces. The product
+    $\sigma$-field on the cartesian product $(X \times Y)$ is defined by
+    \[
+    \mathscr{X} \otimes \mathscr{Y} = \sigma(\{A\times B: A \in \mathscr{X}, B \in \mathscr{Y}\} )
+    .\] 
+    The definition extends to products of higher order. 
+
+    Consider a collection of measure spaces $(X_1, \mathscr{X}_1), \ldots, (X_n, \mathscr{X}_n)$. We define
+    \[
+    \otimes_{i=1}^{n}\mathscr{X}_i = \mathscr{X}_1 \otimes \ldots \otimes \mathscr{X}_n
+    = \sigma(\{A_1\times \ldots\times A_n: A_i \in \mathscr{X}_i, i =1, \ldots, n\} )
+    .\] 
+    One can also show that the latter product is associative.
+\end{definition}

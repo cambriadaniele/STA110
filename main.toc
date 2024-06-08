@@ -35,16 +35,19 @@
 \contentsline {section}{\numberline {9.1}Pushforward measure}{16}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Densities}{16}{section.9.2}%
 \contentsline {section}{\numberline {9.3}Integration with respect to the Lebesgue measure on the real line}{17}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Lecture}{18}{section.9.4}%
+\contentsline {section}{\numberline {9.4}Change of variable}{17}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Integration on product spaces}{17}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Lecture}{18}{section.9.6}%
 \contentsline {chapter}{\numberline {10}General notions in Probability}{20}{chapter.10}%
 \contentsline {section}{\numberline {10.1}Probability spaces}{20}{section.10.1}%
 \contentsline {section}{\numberline {10.2}Random variables and random vectors}{20}{section.10.2}%
 \contentsline {section}{\numberline {10.3}Discrete laws}{21}{section.10.3}%
 \contentsline {section}{\numberline {10.4}Continuous laws}{22}{section.10.4}%
 \contentsline {section}{\numberline {10.5}Expectation}{22}{section.10.5}%
-\contentsline {chapter}{\numberline {11}Collection of random vectors}{23}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Independence}{23}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Sums of independent random vectors}{23}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Gauss vectors}{23}{section.11.3}%
-\contentsline {section}{\numberline {11.4}Lecture}{24}{section.11.4}%
-\contentsline {chapter}{\numberline {12}Mock exam 1}{26}{chapter.12}%
+\contentsline {section}{\numberline {10.6}Distribution function}{23}{section.10.6}%
+\contentsline {chapter}{\numberline {11}Collection of random vectors}{24}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Independence}{24}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Sums of independent random vectors}{24}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Gauss vectors}{24}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Lecture}{25}{section.11.4}%
+\contentsline {chapter}{\numberline {12}Mock exam 1}{27}{chapter.12}%

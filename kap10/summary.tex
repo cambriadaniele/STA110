@@ -156,7 +156,6 @@ i.e., $X$ is a discrete random vector according to Def. ~\ref{def:10.5}.
     $P_X(B) = P_X(\emptyset) = 0$. Also note that, for example, $\mathbb{P}(X=0) 
     = \mathbb{P}(X^{-1}(0)) = \mathbb{P}(t) = 1-p$.
 \end{example}
-\textbf{Classical examples of discrete probability distributions}
 
 \begin{myexample}[Examples of discrete probability distributions]
     \label{myex:Examples_of_discrete_probability_distributions} \hfill
@@ -174,8 +173,73 @@ i.e., $X$ is a discrete random vector according to Def. ~\ref{def:10.5}.
 \textbf{Multinomial:} TODO: Write multinomial discrete probability distribution.
 \end{myexample}
 
+\begin{remark}[]
+    \label{rem:10.3}
+    If $X= (X_1, \ldots, X_k): \Omega \to \mathbb{R}^{k}$ is discrete with support $E = E_1, 
+    \ldots, E_k$, we apply Prop. ~\ref{prop:10.2} and deduce that for any $i= 1, \ldots, k$,
+    \begin{align*}
+        \mathbb{P}(X_i = x) &= \mathbb{P}(X_1 \in \mathbb{R}, \ldots, X_{i-1}\in \mathbb{R},
+        X_i = x, X_{i+1} \in \mathbb{R}, \ldots, X_k \in \mathbb{R}) \\
+        &= P_X(\mathbb{R} \times \ldots\times \mathbb{R}\times  {x}\times\mathbb{R}\times 
+        \ldots\times \mathbb{R}) \\
+        &= \sum_{(x_1, \ldots, x_k)\in E, x_{i}=x}^{ } p_{x_1}, \ldots, x_k
+    .\end{align*}
+    Given $i=1,\ldots,k$, we apply the notation,
+    \[
+    x_{-i}=(x_1, \ldots, x_{i-1}, x_{i+1}, \ldots, x_k)
+    ,\] 
+    (Every $x$ apart from $x_{i}$). And,
+    \[
+    E_{-i} = E_1\times \ldots\times E_{i-1}\times E_{i+1}\times \ldots\times E_k
+    .\] 
+    Then, we obtain
+    \[
+    \mathbb{P}(X_i = x)= \sum_{x_{-i} \in E_{-i}}^{ } p_{x_1, \ldots, x_{i-1},x,x_{i+1}, \ldots, x_k}
+    .\] 
+    Notice that the sum is zero if $x \not\in E_i$ ($X_i $ has support $E_i$).
+    For example, for $k=3$,
+    \[
+    \mathbb{P}(X_1 = x) = \sum_{(x_2, x_3)\in E_2\times E_3}^{} p_{x, x_2,x_3}
+    ,\] 
+    where
+    \[
+    p_{x, x_2,x_3} = \mathbb{P}(\{X_1=x\} \cap \{X_2 = x_2\} \cap \{X_3 = x_3\} )
+    .\] 
+\end{remark}
+
 \section{Continuous laws}%
 \label{sec:Continuous laws}
+\begin{definition}[Continuous random vector]
+    \label{def:10.6}
+    Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space. A random vector is referred 
+    to as continuous if the law of $X$ has density $\phi: \mathbb{R}^{k}\to [0, \infty)$ with 
+    respect to the Lebesgue measure on $\mathfrak{B}(\mathbb{R}^{k})$,
+    \[
+    P_X(B)= \int_{B} \phi(x)dx
+    .\] 
+    The density $\phi$ of $P_X$ is referred to as a probability density function.
+\end{definition}
+
+\begin{myexample}[Classical examples of probability distributions with probability density function $\phi$]
+    \label{myex:10.2}
+    TODO: Write the probability distributions.
+
+    \textbf{Continuous uniform:}
+
+    \textbf{Exponential:}
+
+    \textbf{Normal:}
+
+    \textbf{Multivariate Normal:}
+\end{myexample}
+
+\begin{definition}[]
+    \label{def:10.7}
+    Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space. Suppose that fo any $\omega \in \Omega$,
+    $S(\omega)$ is a statement on $\Omega$. We say $S$ is true $\mathbb{P}$ almost surely (a.s.) if 
+    $\mathbb{P}(\{\omega: S(\omega) \text{ is true}\} )=1$. (Cf. Def. ~\ref{def:8.4}).
+    
+\end{definition}
 
 \section{Expectation}%
 \label{sec:Expectation}
@@ -194,6 +258,32 @@ i.e., $X$ is a discrete random vector according to Def. ~\ref{def:10.5}.
     .\] 
     In addition, if $f$ is not necessarily nonnegative, this proposition holds if $\mathbb{E}[|f(X)|]<\infty$.
 \end{proposition}
+
+\section{Distribution function}%
+\label{sec:Distribution function}
+
+\begin{definition}[]
+    \label{def:10.10}
+    Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space and $X$ be a random variable. The distribution
+    function $F$ of $X$ is defined by
+    \[
+        F_X(t) = \mathbb{P}(X \le t) = P_X((-\infty, t])
+    .\] 
+    
+    \begin{remark}[]
+        \label{rem:10.7}
+        Using Prop. ~\ref{prop:10.2}, if $X$ is discrete , we have that for any $t \in \mathbb{R}$,
+        \[
+        F_X(t)=\sum_{x\in E, x\le t}^{ } p_x
+        .\] 
+        If $X$ is continuous with law that has probability density function $\phi$, we have upon Def.
+        ~\ref{def:10.6} that for any $t \in \mathbb{R}$,
+        \[
+            F_X(t) \int_{(-\infty, t]} \phi(x)dx
+        .\] 
+    \end{remark}
+\end{definition}
+
 
 
 
