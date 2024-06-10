@@ -25,6 +25,23 @@
     the urn.
 \end{example}
 
+\begin{proposition}[]
+    \label{prop:11.4}
+    Let $X_1, \ldots, X_n $ be $n $ random variables.
+    \begin{enumerate}[label=(\roman*)]
+        \item Suppose that for any $i=1, \ldots, n $, $P_{X_i}(dx) = \phi(x)dx$, i.e.,
+            $P_{X_i} $ has probability density function $\phi_i $. Then, if $X_1, \ldots, X_n $ 
+            are independent, the law of the random vector $X = (X_1, \ldots, X_n) $ has 
+            probability density function
+            \[
+            \phi(x) = \prod_{i=1}^{n} \phi_i(x_{i}), 
+            \quad x=(x_1, \ldots, x_{n}) \in \mathbb{R}^{n}
+            .\] 
+        \item Suppose that the random vector $X=(X_1, \ldots, X_n) $ is s.t.
+            $P_X(dx) = \phi(x)dx $
+    \end{enumerate}
+\end{proposition}
+
 \section{Sums of independent random vectors}%
 \label{sec:Sums of independent random vectors}
 

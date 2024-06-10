@@ -207,13 +207,67 @@ Solve with the pdf of the mock exam on the side.
             \begin{align*}
                 F_X(t) &= \int_{[-3, 0)}\left( \frac{1}{3} + \frac{x}{9} \right) dx 
                 + \int_{[0, t)} \left( \frac{1}{3} - \frac{x}{9} \right) dx\\
+                &= \left[ \frac{x}{3} + \frac{x^2}{18} \right]_{-3}^{0} 
+                + \left[ \frac{x}{3} - \frac{x^2}{18} \right]_{0}^{t}\\
+                &= \frac{1}{2} + \frac{t}{3} - \frac{t^2}{18} \\
             .\end{align*}
+            We obtain
+            \[
+            F_X(t) = 
+            \begin{cases}
+                0, & t < -3 \\
+                \frac{t}{3} + \frac{t^2}{18} + \frac{1}{2}, & -3 \le t <0 \\
+                \frac{t}{3} - \frac{t^2}{18} +\frac{1}{2}, & 0 \le t<3 \\
+                1, & t \ge 3
+            \end{cases}
+            .\] 
+        \item Calculate the expected value and the variance of $X$.
+             \begin{itemize}
+                \item Expected value
+                    \begin{align*}
+                        \mathbb{E}(X) &= \int_{\mathbb{R}} x\phi(x) dx
+                        = \int_{[-3,0)}\left( \frac{x}{3} + \frac{x^2}{9} \right) dx
+                        + \int_{[0,3)}\left( \frac{x}{3} - \frac{x^2}{9} \right) dx\\
+                        &= \left[ \frac{x^2}{6} + \frac{x^{3}}{27} \right]_{-3}^{0}  
+                        +\left[ \frac{x^2}{6} - \frac{x^{3}}{27} \right]_{0}^{3}
+                        = 0 - (\frac{3}{2} - 1) + \frac{3}{2} - 1 -0 =0\\
+                    .\end{align*}
+                \item Variance
+                    \begin{align*}
+                        Var(X) &= \mathbb{E}(X^{2})
+                        = \int_{[-3,0)}\left( \frac{x^2}{3} + \frac{x^3}{9} \right) dx
+                        + \int_{[0,3)}\left( \frac{x^2}{3} - \frac{x^3}{9} \right) dx\\
+                        &= \left[ \frac{x^3}{9} + \frac{x^{4}}{36} \right]_{-3}^{0}  
+                        +\left[ \frac{x^3}{9} - \frac{x^{4}}{36} \right]_{0}^{3}
+                        = 0 - (-3 + \frac{9}{4}) + 3 - \frac{9}{4} -0 = \frac{3}{2}\\
+                    .\end{align*}
+            \end{itemize}
+        \item Show that $F_X|_{(-3,3)}: (-3, 3) \to (0,1) $ is a bijection. We know that 
+            $F_X $ is continuous on $\mathbb{R} $. 
+
+            For $t \in (-3, 0) $
+            \begin{align*}
+                F'_X(t) = \frac{1}{3} + \frac{t}{9} > \frac{1}{3} + -\frac{3}{9} = 0
+            .\end{align*}
+
+            For $t \in [0, 3) $
+            \begin{align*}
+                F'_X(t) = \frac{1}{3} - \frac{t}{9} > \frac{1}{3} - \frac{3}{9} = 0
+            .\end{align*}
+
+            $F'_X(t)|_{(-3,3)} > 0 \text{ for every } t \in (-3, 3) \Rightarrow F_X(t)|_{(-3,3)}$
+            is monotonically increasing for every $t \in (-3, 3) \Rightarrow F_X(t)|_{(-3,3)}$
+            is bijective.
 
     \end{enumerate}
 \end{exercise}
 
 \begin{exercise}[]
     \label{ex:12.4}
+    Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space and $X_1 $ and $X_2 $ be two
+    random variables on $\Omega$ that are independent with common law that is continuous uniform
+    on the interval $\left[ 0,1 \right]  $. what is the probability density function of the
+    random vector $Y=(X_1, 2\sqrt{X_2} ) $.
 \end{exercise}
 
 \begin{exercise}[]
