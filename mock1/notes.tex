@@ -268,6 +268,39 @@ Solve with the pdf of the mock exam on the side.
     random variables on $\Omega$ that are independent with common law that is continuous uniform
     on the interval $\left[ 0,1 \right]  $. what is the probability density function of the
     random vector $Y=(X_1, 2\sqrt{X_2} ) $.
+
+    Refer to Prop. ~\ref{prop:11.4}
+    \begin{align*}
+      \phi(y) = \phi_1(y_1)\phi_2(y_2), \quad y = (y_1, y_2) \in \mathbb{R}^{2}
+    .\end{align*}
+    We know that 
+    \begin{align*}
+      \phi_1(y_1)= \mathbbm{1}_{[0,1]}(y_1), \quad y_1 \in \mathbb{R} 
+    .\end{align*}
+    For the probability density function of $2\sqrt{X_2}  $, refer to Example ~\ref{ex:10.20}.
+    
+    By Prop. ~\ref{prop:10.3}, we know that 
+    \[
+      \mathbb{E}(f(Y_2)) = \mathbb{E}(f(2\sqrt{X_2} )) = \int_{0}^{1} f(2\sqrt{x_2})dx_2.
+    \] 
+    We then substitute $y_2 = 2\sqrt{x_2} $,  $\left( x_2 = \left( \frac{y_2}{2} \right)^2  \right)$,
+    $\left( dy_2 = x_2^{-\frac{1}{2}} dx_2 \Rightarrow dy_2 = \frac{2}{y_2}dx_2 \Rightarrow dx_2 = 2^{-1}y_2\right)  $,
+    $\left( x_2 \in \left[ 0,1 \right] \Rightarrow y_2 \in \left[ 0,2 \right]  \right)  $.
+    \[
+    \mathbb{E}(f(Y_2)) = \int_{0}^{2} f(y_2)2^{-1}y_2dy_2 = \int_{\mathbb{R}} f(y_2)\mathbbm{1}_{[0,2]}(y_2)2^{-1}y_2dy_2
+    .\] 
+    Hence, the law of $Y_2 $ is given by
+    \[
+    \phi(y_2) = \mathbbm{1}_{[0,2]}(y_2)2^{-1}y_2, \quad y_2 \in \mathbb{R}
+    .\] 
+
+    In conclusion
+    \[
+      \phi(y_1, y_2) = \mathbbm{1}_{\left[ 0,1 \right] }(y_1) \mathbbm{1}_{\left[ 0,2 \right] }(y_2) 2^{-1}y_2 
+    .\] 
+
+
+
 \end{exercise}
 
 \begin{exercise}[]
