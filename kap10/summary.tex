@@ -259,9 +259,31 @@ i.e., $X$ is a discrete random vector according to Def. ~\ref{def:10.5}.
     In addition, if $f$ is not necessarily nonnegative, this proposition holds if $\mathbb{E}[|f(X)|]<\infty$.
 \end{proposition}
 
+\begin{remark}[]
+    \label{rem:10.6}
+    TODO: Write remark
+\end{remark}
+
 \begin{example}[]
     \label{ex:10.20}
-    TODO
+    Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space and $U $ be a random variable with
+    uniform law on $\left[ 0,1 \right]  $, i.e., $P_U(dx) = \mathbbm{1}_{\left[ 0,1 \right] }(x) dx $. 
+    Define the random variable $X = -2\log(U) $. By Prop. ~\ref{prop:10.3}, for any $f: \mathbb{R} \to \mathbb{R} $,
+    nonnegative and $\mathfrak{B}(\mathbb{R}) $ measurable,
+    \[
+      \mathbb{E}[f(X)] = \mathbb{E}\left[ f(-2\log(U)) \right] 
+      = \int_{\mathbb{R}} f(-2\log(u))\mathbbm{1}_{\left[ 0,1 \right] }(u) du 
+      = \int_{\left[ 0,1 \right] } f(-2\log(u))du
+    .\] 
+    We then substitute $x = -2\log(u)$. Note that $u = e^{-x / 2} $, and that
+    $du = - \frac{e^{-x/2}}{2} $. We use Def. ~\ref{def:9.6}
+    \[
+    \int_{\left[ x(0), x(1) \right] } f(x)\left(-\frac{e^{-x / 2}}{2} \right) dx
+    = \int_{\left[ x(1), x(0) \right] } f(x)\left(\frac{e^{-x / 2}}{2} \right) dx
+    = \int_{\left[ 0, \infty \right] } f(x) \frac{e^{-x / 2}}{2} dx
+    .\] 
+    By Remark ~\ref{rem:10.6}, $P_X(dx) = \frac{e^{-x /2}}{2} $, i.e., the law of $X $
+    is exponential with  $\lambda = \frac{1}{2} $.
 \end{example}
 
 \section{Distribution function}%

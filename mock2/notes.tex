@@ -1,0 +1,63 @@
+
+\chapter{Mock exam 2}%
+\label{cha:Mock exam 2}
+Solve with the pdf of the mock exam on the side.
+
+\textbf{Notation:} We recall some of the terminology:
+\begin{itemize}
+    \item Given a nonempty set $\Omega$, $\mathcal{P}(\Omega)$ is the power set on $\Omega$;
+    \item $\mathfrak{B}(\mathbb{R}^k)$ denotes the Borel $\sigma$-field on $\mathbb{R}^k$, $k \geq 1$;
+    \item The measure
+    \[
+    \mu(A) = 
+    \begin{cases} 
+    \#A, & \text{if } A \text{ is finite} \\
+    \infty, & \text{otherwise},
+    \end{cases}
+    \quad A \in \mathcal{P}(\Omega),
+    \]
+    is referred to as the counting measure on $\mathcal{P}(\Omega)$;
+    \item Given a measurable space $(\Omega, \mathcal{F})$ and $x \in \Omega$, we write $\delta_x$ for the measure
+    \[
+    \mathcal{F} \ni A \mapsto \delta_x(A) = 
+    \begin{cases} 
+    1, & \text{if } x \in A \\
+    0, & \text{otherwise}.
+    \end{cases}
+    \]
+\end{itemize}
+
+\begin{exercise}[]
+    \label{ex:13.4}
+    Let $(\Omega, \mathcal{F}, \mathbb{P})$ be a probability space and $X_1 $ and $X_2 $ be two
+    random variables on $\Omega$ that are independetn with common law that is continuous uniform
+    on the interval $\left[ 0,1 \right]  $. what is the probability density function of the random
+    vector $Y = \left( \frac{1+X_1}{2}, X_2 \right)$?
+
+    We know that 
+    \[
+    \phi_2(y_2) = \mathbbm{1}_{\left[ 0,1 \right] }(y_2), \quad y_2 \in \mathbb{R}
+    .\] 
+    To find the probability density function of $\frac{1+X_1}{2}$, we know by Prop. ~\ref{prop:10.3} that
+    \[
+      \mathbb{E}\left[ f(Y_1) \right] = \mathbb{E}\left[ f\left( \frac{1+X_1}{2} \right)  \right] 
+      = \int_{\left[ 0,1 \right] } f\left( \frac{1+x_1}{2} \right)dx_1
+    .\] 
+    We substitue $y_1 = \frac{1+x_1}{2} $. We also note that $x_1 = 2y_1-1 $, and that
+    $dx_1= 2dy_1 $. We also know that $x_1 \in \left[ 0,1 \right] \Rightarrow y_1 \in \left[ \frac{1}{2}, 1 \right]  $.
+    \[
+      \int_{\left[ \frac{1}{2},1 \right] } f(y_1) 2dy_1 
+      = \int_{\mathbb{R}} f(y_1) \mathbbm{1}_{\left[ \frac{1}{2}, 1 \right] }(y_1) 2 dy_1 
+    .\] 
+    Hence, the law of $Y_1 $ is given by
+    \[
+    \phi_1(y_1) = 2 \times \mathbbm{1}_{\left[ \frac{1}{2}, 1 \right] }(y_1)  \quad y_1 \in \mathbb{R} 
+    .\] 
+    In conclusion
+    \[
+    \phi(y_1, y_2) = 2(\mathbbm{1}_{\left[ \frac{1}{2}, 1 \right] }(y_1) \mathbbm{1}_{\left[ 0,1 \right] }(y_2)  )
+    .\] 
+
+
+\end{exercise}
+

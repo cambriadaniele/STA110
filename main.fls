@@ -157,6 +157,9 @@ INPUT kap11/lecture.aux
 INPUT ./mock1/notes.aux
 INPUT ./mock1/notes.aux
 INPUT mock1/notes.aux
+INPUT ./mock2/notes.aux
+INPUT ./mock2/notes.aux
+INPUT mock2/notes.aux
 OUTPUT main.aux
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -327,6 +330,12 @@ INPUT ./mock1/notes.tex
 INPUT mock1/notes.tex
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT ./mock2/notes.tex
+INPUT ./mock2/notes.tex
+OUTPUT mock2/notes.aux
+INPUT ./mock2/notes.tex
+INPUT ./mock2/notes.tex
+INPUT mock2/notes.tex
 INPUT main.aux
 INPUT ./kap1/summary.aux
 INPUT ./kap1/summary.aux
@@ -370,6 +379,9 @@ INPUT kap11/lecture.aux
 INPUT ./mock1/notes.aux
 INPUT ./mock1/notes.aux
 INPUT mock1/notes.aux
+INPUT ./mock2/notes.aux
+INPUT ./mock2/notes.aux
+INPUT mock2/notes.aux
 INPUT ./main.out
 INPUT ./main.out
 INPUT /Users/danielecambria/Library/texlive/2024/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk

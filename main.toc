@@ -51,3 +51,4 @@
 \contentsline {section}{\numberline {11.3}Gauss vectors}{24}{section.11.3}%
 \contentsline {section}{\numberline {11.4}Lecture}{25}{section.11.4}%
 \contentsline {chapter}{\numberline {12}Mock exam 1}{27}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Mock exam 2}{32}{chapter.13}%
