@@ -134,8 +134,14 @@ Solve with the pdf of the mock exam on the side.
                     Where $\mathbb{P}(X=1) = \mathbb{P}(X^{-1}(1)) = \mathbb{P}(h)$.
             \end{enumerate}
             $P_2$ is not a discrete law.
-        \item  TODO: Understand and complete. Cf. Sec. ~\ref{sec:Gauss vectors}.
-
+        \item  
+          \begin{enumerate}[label=\arabic*.]
+            \item As said in Remark ~\ref{rem:11.11}, it is not sufficient
+              for $X_1 $, $X_2 $ to be pairwise uncorrelated. False.
+            \item Random variables being independent implies that their covariances are $=0 $.
+              The opposite is not always true. True.
+            \item TODO: $L^{1} $ convergence.
+          \end{enumerate}
     \end{enumerate}
 \end{exercise}
 
@@ -181,13 +187,53 @@ Solve with the pdf of the mock exam on the side.
           on $\mathfrak{B}(\mathbb{R}) \otimes \ldots \otimes \mathfrak{B}(\mathbb{R}) $, cf.
           Prop. ~\ref{prop:11.1}
           \[
-          P_Y(A) = P_{Y_1}\otimes\ldots\otimesP_{Y_n}(A), \quad A \in 
+          P_Y(A) = (P_{Y_1}\otimes\ldots\otimes P_{Y_n})(A), \quad A \in 
           \mathfrak{B}(\mathbb{R}) \otimes \ldots \otimes \mathfrak{B}(\mathbb{R}) 
+          .\]
+          We also need to calculate $\mathbb{P}(Y \in \{1\}^{n} ) $, where $\{1\}^{n} $ represents
+          the set with $n $ 1s. Hence, we are finding the probability that each $X_i $ is equal to
+          $\frac{1}{2} $ simultaneously.
+          \[
+          \mathbb{P}(Y \in \{1\}^{n}) = P_X(\{1\})^{n} = \left(\frac{1}{2}\right)^{n}
           .\] 
         \item
-          TODO: Do exercise
+          Show that $\|Y\|^2 $ is costant $\mathbb{P} $ a.s.
+
+          First, we know that
+          \[
+          \|Y\|^2 = \left( \sqrt{\sum_{n=1}^{n} X_{i}^2 } \right)^2
+          .\] 
+          Also, since $X_1^2, \ldots, X_2^2 $ are independent
+          \[
+          Var(\|Y\|^2) = Var\left( \sum_{n=1}^{n} X_{i}^2  \right) = \sum_{i=1}^{n} Var(X_{i}^2)
+          .\] 
+          Since 
+          \[
+          \mathbb{P}(X_{i}^2=1) = \mathbb{P}(\{\omega \in \Omega: X_i(\omega)^2 = 1 \} )
+          = \mathbb{P}(\{\omega \in \Omega: X_i(\omega) = -1 \text{ or } X_i(\omega) = 1\} ) = 1
+          .\]
+          $X_i $ is constant and equal to $\mathbb{E}[X_{i}^2] $ $\mathbb{P} $ a.s. That is, 
+          $Var(X_{i}^2) = 0$. Therefore, $Var(\|Y\|^2) = 0$ and hence $\|X\|^2 $ is constant $\mathbb{P} $ a.s.
         \item
-          TODO: Do exercise
+          What is the law of $Z = X_1 + X_2 $?
+          We know that both random variables have support $E = \{-1,1\}  $. The common support is
+          \[
+          E_1+E_2 = \{-1,1\} + \{-1,1\} = \{-2, 0, 2\} 
+          .\] 
+          For $X_1 + X_2 = z $
+          \begin{align*}
+          P_z(\{z\} ) &= \sum_{x_2 \in \{-1,1\} }^{} P_{X_1}(\{z-x_2\})P_{X_2}(\{x_2\} ), \quad z \in \{-2,0,2\} \\
+          &= \begin{cases}
+            P_{X_1}(\{-1\} )P_{X_2}(\{-1\} ), & z = -2, \\
+            P_{X_1}(\{1\} )P_{X_2}(\{-1\} ) + P_{X_1}(\{-1\} )P_{X_2}(\{1\} ), & z = 0, \\
+            P_{X_1}(\{1\} )P_{X_2}(\{1\} ), & z = 2,
+          \end{cases} \\
+          &= \begin{cases}
+            \frac{1}{4}, & z=-2,\\
+            \frac{1}{2}, & z=0,\\
+            \frac{1}{4}, & z=2.
+          \end{cases} 
+          \end{align*}
     \end{enumerate}
 \end{exercise}
 
